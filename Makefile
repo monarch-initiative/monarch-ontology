@@ -24,11 +24,11 @@ cache/%.owl:
 	owltools $< --slurp-import-closure -d $(CACHEDIR) -c $@ 
 
 # bundled
-%-merged.owl: %.owl $(CATALOG)
+%-merged.owl: %.owl 
 	owltools $(USECAT) $< --merge-imports-closure -o $@
 
 # bundled, no constraints
-%-merged-nd.owl: %.owl $(CATALOG)
+%-merged-nd.owl: %.owl
 	owltools $(USECAT) $< --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
 
 %-validate.txt: %.owl
