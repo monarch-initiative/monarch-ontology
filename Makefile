@@ -1,10 +1,15 @@
 OBO=http://purl.obolibrary.org/obo
 UPHENO = $(OBO)/upheno
 CATALOG = catalog-v001.xml
-USECAT= --catalog-xml $(CATALOG)
+##USECAT= --catalog-xml $(CATALOG)
+USECAT=
 CACHEDIR= cache
 
-all: $(CATALOG)
+TGT=monarch-merged-nd-reasoned
+
+all: $(TGT).owl $(TGT).obo
+
+cat: $(CATALOG) 
 
 # See: https://github.com/owlcollab/owltools/wiki/Import-Chain-Mirroring
 $(CATALOG): monarch.owl
