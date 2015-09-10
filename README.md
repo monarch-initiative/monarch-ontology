@@ -6,7 +6,7 @@ The top-level ontology is found in the file [monarch.owl](monarch.owl)
 
 This imports a number of other ontologies. These will be imported over the web. The ontologies are managed in separate github repositories:
 
- * Phenotypes: [monarch-initiative/upheno](https://github.com/monarch-initiative/upheno)
+ * Phenotypes: [obophenotype/upheno](https://github.com/obophenotype/upheno)
  * Diseases: [monarch-initiative/monarch-disease-ontology](https://github.com/monarch-initiative/monarch-disease-ontology)
 
 ## Computational Usage
