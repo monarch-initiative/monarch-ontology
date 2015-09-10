@@ -1,6 +1,17 @@
 This repository contains the source for the top-level importer for the Monarch ontology
 
-## Usage
+## Components
+
+The top-level ontology is found in the file [monarch.owl](monarch.owl)
+
+This imports a number of other ontologies. These will be imported over the web. The ontologies are managed in separate github repositories:
+
+ * Phenotypes: [monarch-initiative/upheno](https://github.com/monarch-initiative/upheno)
+ * Diseases: [monarch-initiative/monarch-disease-ontology](https://github.com/monarch-initiative/monarch-disease-ontology)
+
+## Computational Usage
+
+The ontology can be inspected directly using Protege or used computationally using the OWLAPI. The follow instructions are for developers of the ontology
 
 See the Makefile for details. You will need owltools.
 
