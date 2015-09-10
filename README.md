@@ -9,6 +9,7 @@ This imports a number of other ontologies. These will be imported over the web. 
  * Phenotypes: [obophenotype/upheno](https://github.com/obophenotype/upheno)
     * [mammalian-phenotype-ontology](https://github.com/obophenotype/mammalian-phenotype-ontology/)
     * [human-phenotype-ontology](https://github.com/obophenotype/human-phenotype-ontology/)
+    * worm, fly, zebrafish, yeast, ...
  * Diseases: [monarch-initiative/monarch-disease-ontology](https://github.com/monarch-initiative/monarch-disease-ontology)
 
 ## Computational Usage
