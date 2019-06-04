@@ -23,7 +23,7 @@
       <dc:creator xml:lang="en">Chris Mungall</dc:creator>
 
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
-        <owl:imports rdf:resource="https://github.com/obophenotype/upheno/blob/7680000660a4a4cb9e60af3aa4a7c9d45f6cee3c/metazoa.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/obophenotype/upheno/4f21b3d0ab3552e0fc2ae9e8d37ee503626e2f28/metazoa.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/zfa.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/go/extensions/go-plus.owl"/>
