@@ -1,0 +1,166 @@
+allow_equivalents: all
+catalog_file: catalog-v001.xml
+components:
+  directory: components/
+  filename: null
+  products:
+  - filename: upheno.owl
+  - filename: mondo.owl
+  - filename: eco.owl
+  - filename: so.owl
+contact: null
+contributors: null
+creators: null
+description: None
+dosdp_tools_options: --obo-prefixes=true
+edit_format: owl
+export_formats:
+- owl
+- obo
+- json
+github_org: monarch-initiative
+gzip_main: false
+id: mo
+import_group:
+  directory: imports/
+  disabled: false
+  ids: null
+  products:
+  - description: null
+    id: nbo
+    mirror_from: http://purl.obolibrary.org/obo/nbo/nbo-base.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: pr
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: go
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: uberon
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: ro
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: chebi
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: hsapdv
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: cl
+    mirror_from: http://purl.obolibrary.org/obo/cl/cl-base.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: mpath
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: ncbitaxon-taxslim.owl
+    mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: go-plus
+    mirror_from: http://purl.obolibrary.org/obo/go/extensions/go-plus.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: so
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: eco
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: uberon-ext
+    mirror_from: http://purl.obolibrary.org/obo/uberon/ext.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: uberon-bridge-to-zfa.owl
+    mirror_from: http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: uberon/bridge/uberon-bridge-to-ma.owl
+    mirror_from: http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: uberon/bridge/uberon-bridge-to-fma.owl
+    mirror_from: http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-fma.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: uberon/bridge/cl-bridge-to-zfa.owl
+    mirror_from: http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: uberon/bridge/cl-bridge-to-ma.owl
+    mirror_from: http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-ma.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: uberon/bridge/cl-bridge-to-fma.owl
+    mirror_from: http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-fma.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: uberon/bridge/uberon-bridge-to-nifstd.owl
+    mirror_from: http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-nifstd.owl
+    rebuild_if_source_changes: true
+    robot_settings: null
+  - description: null
+    id: pato
+    mirror_from: null
+    rebuild_if_source_changes: true
+    robot_settings: null
+  rebuild_if_source_changes: true
+import_pattern_ontology: false
+license: Unspecified
+namespaces:
+- http://purl.obolibrary.org/obo/HP_
+- http://purl.obolibrary.org/obo/hp
+obo_format_options: ''
+pattern_group: null
+pattern_pipelines_group: null
+primary_release: full
+reasoner: ELK
+release_artefacts:
+- base
+- simple-non-classified
+- full
+- simple
+repo: monarch-ontology
+report_fail_on: none
+robot_java_args: -Xmx8G
+robot_settings: null
+robot_version: null
+robotemplate_group: null
+subset_group: null
+title: Monarch Ontology
+travis_emails: null
+uribase: http://purl.obolibrary.org/obo
+use_dosdps: true
+use_external_date: false

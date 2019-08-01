@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/nbo_import.owl" uri="imports/nbo_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/nbo_import.obo" uri="imports/nbo_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/pr_import.owl" uri="imports/pr_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/pr_import.obo" uri="imports/pr_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/go_import.owl" uri="imports/go_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/go_import.obo" uri="imports/go_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon_import.owl" uri="imports/uberon_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon_import.obo" uri="imports/uberon_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/ro_import.owl" uri="imports/ro_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/ro_import.obo" uri="imports/ro_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/chebi_import.owl" uri="imports/chebi_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/chebi_import.obo" uri="imports/chebi_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/hsapdv_import.owl" uri="imports/hsapdv_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/hsapdv_import.obo" uri="imports/hsapdv_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl_import.owl" uri="imports/cl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl_import.obo" uri="imports/cl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/mpath_import.owl" uri="imports/mpath_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/mpath_import.obo" uri="imports/mpath_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/ncbitaxon-taxslim.owl_import.owl" uri="imports/ncbitaxon-taxslim.owl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/ncbitaxon-taxslim.owl_import.obo" uri="imports/ncbitaxon-taxslim.owl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/go-plus_import.owl" uri="imports/go-plus_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/go-plus_import.obo" uri="imports/go-plus_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/so_import.owl" uri="imports/so_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/so_import.obo" uri="imports/so_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/eco_import.owl" uri="imports/eco_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/eco_import.obo" uri="imports/eco_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-ext_import.owl" uri="imports/uberon-ext_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-ext_import.obo" uri="imports/uberon-ext_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-zfa.owl_import.owl" uri="imports/uberon-bridge-to-zfa.owl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-zfa.owl_import.obo" uri="imports/uberon-bridge-to-zfa.owl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/uberon-bridge-to-ma.owl_import.owl" uri="imports/uberon/bridge/uberon-bridge-to-ma.owl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/uberon-bridge-to-ma.owl_import.obo" uri="imports/uberon/bridge/uberon-bridge-to-ma.owl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/uberon-bridge-to-fma.owl_import.owl" uri="imports/uberon/bridge/uberon-bridge-to-fma.owl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/uberon-bridge-to-fma.owl_import.obo" uri="imports/uberon/bridge/uberon-bridge-to-fma.owl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/cl-bridge-to-zfa.owl_import.owl" uri="imports/uberon/bridge/cl-bridge-to-zfa.owl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/cl-bridge-to-zfa.owl_import.obo" uri="imports/uberon/bridge/cl-bridge-to-zfa.owl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/cl-bridge-to-ma.owl_import.owl" uri="imports/uberon/bridge/cl-bridge-to-ma.owl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/cl-bridge-to-ma.owl_import.obo" uri="imports/uberon/bridge/cl-bridge-to-ma.owl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/cl-bridge-to-fma.owl_import.owl" uri="imports/uberon/bridge/cl-bridge-to-fma.owl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/cl-bridge-to-fma.owl_import.obo" uri="imports/uberon/bridge/cl-bridge-to-fma.owl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/uberon-bridge-to-nifstd.owl_import.owl" uri="imports/uberon/bridge/uberon-bridge-to-nifstd.owl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/uberon-bridge-to-nifstd.owl_import.obo" uri="imports/uberon/bridge/uberon-bridge-to-nifstd.owl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/pato_import.owl" uri="imports/pato_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/pato_import.obo" uri="imports/pato_import.obo"/>
+  
+
+
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/upheno.owl" uri="components/upheno.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/mondo.owl" uri="components/mondo.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/eco.owl" uri="components/eco.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/so.owl" uri="components/so.owl"/>
+  
+ 
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/patterns/definitions.owl" uri="../patterns/definitions.owl"/>
+  <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base=""/>
+</catalog>
