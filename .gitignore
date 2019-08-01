@@ -26,3 +26,9 @@ src/ontology/ed_definitions_merged.owl
 src/ontology/patterns 
 *.tmp.obo
 *.tmp.owl
+*_import.obo
+*_import.json
+src/patterns/pattern_owl_seed.txt
+src/patterns/all_pattern_terms.txt
+src/ontology/simple_seed.txt
+src/ontology/merged-mo-edit.owl

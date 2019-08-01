@@ -3,7 +3,7 @@ WHERE {
   { ?s1 ?p1 ?term . }
   UNION
   { ?term ?p2 ?o2 . }
-  FILTER(isIRI(?term) && (regex(str(?term), UCASE("mo_")) || regex(str(?term), "http://purl.obolibrary.org/obo/HP_") || regex(str(?term), "http://purl.obolibrary.org/obo/hp")))
+  FILTER(isIRI(?term) && (regex(str(?term), UCASE("mo_")) || regex(str(?term), "http://purl.obolibrary.org/obo/HP_") || regex(str(?term), "http://purl.obolibrary.org/obo/MONDO_") || regex(str(?term), "http://purl.obolibrary.org/obo/UPHENO_") || regex(str(?term), "http://purl.obolibrary.org/obo/MP_") || regex(str(?term), "http://purl.obolibrary.org/obo/WBPhenotype_") || regex(str(?term), "http://purl.obolibrary.org/obo/ZP_")))
 }
 
 
