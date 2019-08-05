@@ -35,3 +35,6 @@ src/ontology/merged-mo-edit.owl
 imports/
 reports/
 components/
+/mo-*
+/mo.*
+src/ontology/monarch-pre.owl
