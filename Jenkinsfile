@@ -49,7 +49,7 @@ pipeline {
 	ROBOT_JAVA_ARGS = '-Xmx30G'
     }
     options{
-	timestamps()
+	//timestamps()
 	buildDiscarder(logRotator(numToKeepStr: '14'))
     }
     stages {
