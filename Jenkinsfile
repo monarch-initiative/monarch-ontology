@@ -29,7 +29,7 @@ pipeline {
 
 	// What is the file "namespace" of the ontology--used for
 	// finding artifacts.
-	ONTOLOGY_FILE_HINT = 'mp'
+	ONTOLOGY_FILE_HINT = 'mo'
 	// Ontology repo information.
 	TARGET_ONTOLOGY_BRANCH = 'mo-odk'
 	TARGET_ONTOLOGY_URL = 'https://github.com/monarch-initiative/monarch-ontology.git'
