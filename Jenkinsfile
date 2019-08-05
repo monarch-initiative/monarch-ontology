@@ -31,8 +31,8 @@ pipeline {
 	// finding artifacts.
 	ONTOLOGY_FILE_HINT = 'mp'
 	// Ontology repo information.
-	TARGET_ONTOLOGY_BRANCH = 'mp-odk'
-	TARGET_ONTOLOGY_URL = 'https://github.com/obophenotype/mammalian-phenotype-ontology.git'
+	TARGET_ONTOLOGY_BRANCH = 'mo-odk'
+	TARGET_ONTOLOGY_URL = 'https://github.com/monarch-initiative/monarch-ontology.git'
 	// The people to call when things go bad or go well. It is a
 	// comma-space "separated" string.
 	TARGET_ADMIN_EMAILS = 'nicolas.matentzoglu@gmail.com'
@@ -46,7 +46,7 @@ pipeline {
 	// possible.
 	MAKECMD = 'make'
 	// Control the ROBOT environment.
-	ROBOT_JAVA_ARGS = '-Xmx12G'
+	ROBOT_JAVA_ARGS = '-Xmx30G'
     }
     options{
 	timestamps()
