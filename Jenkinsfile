@@ -34,8 +34,8 @@ pipeline {
 		// finding artifacts.
 		ONTOLOGY_FILE_HINT = 'mo'
 		// Ontology repo information.
-		TARGET_ONTOLOGY_BRANCH = 'master'
-		TARGET_ONTOLOGY_URL = 'https://github.com/monarch-ebi-dev/monarch_ontology_data'
+		TARGET_ONTOLOGY_BRANCH = 'mo-odk'
+		TARGET_ONTOLOGY_URL = 'https://github.com/monarch-initiative/monarch-ontology.git'
 		// The people to call when things go bad or go well. It is a
 		// comma-space "separated" string.
 		TARGET_ADMIN_EMAILS = 'nicolas.matentzoglu@gmail.com'
