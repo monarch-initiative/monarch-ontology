@@ -142,7 +142,7 @@ pipeline {
 	// Let's let our internal people know if things go badly.
 	failure {
 	    echo "There has been a failure in the ${env.BRANCH_NAME} pipeline."
-	    mail bcc: '', body: "There has been a pipeline failure in ${env.BRANCH_NAME}. Please see: ${env.JOB_DISPLAY_URL}", cc: '', from: '', replyTo: '', subject: "Pipeline FAIL for ${env.ONTOLOGY_FILE_HINT} on ${env.BRANCH_NAME}", to: "${TARGET_ADMIN_EMAILS}"
+	    //mail bcc: '', body: "There has been a pipeline failure in ${env.BRANCH_NAME}. Please see: ${env.JOB_DISPLAY_URL}", cc: '', from: '', replyTo: '', subject: "Pipeline FAIL for ${env.ONTOLOGY_FILE_HINT} on ${env.BRANCH_NAME}", to: "${TARGET_ADMIN_EMAILS}"
         }
     }
 }
