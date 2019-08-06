@@ -69,6 +69,8 @@ pipeline {
 		
 		stage('Initialize') {
 			steps {
+				// Upgrading docker container
+				sh 'docker pull obolibrary/odkfull:latest'
 				// Start preparing environment.
 				sh 'env > env.txt'
 				sh 'echo $BRANCH_NAME > branch.txt'
