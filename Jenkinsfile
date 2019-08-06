@@ -96,6 +96,7 @@ pipeline {
 
 		    dir('./src/ontology') {
 			retry(3){
+			    sh 'make robot --version'
 			    sh 'make prepare_release'
 			}
 		    }
