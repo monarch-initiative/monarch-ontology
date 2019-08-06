@@ -102,6 +102,7 @@ pipeline {
 
 					dir('./src/ontology') {
 						retry(3){
+							sh 'make odkinfo'
 							sh 'make prepare_release'
 						}
 					}
