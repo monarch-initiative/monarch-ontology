@@ -56,8 +56,8 @@ all_main: $(MAIN_FILES)
 ##
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
-
-IMPORTS =  nbo go uberon ro chebi hsapdv cl mpath ncbitaxon-taxslim.owl go-plus so eco uberon-ext uberon-bridge-to-zfa.owl uberon/bridge/uberon-bridge-to-ma.owl uberon/bridge/uberon-bridge-to-fma.owl uberon/bridge/cl-bridge-to-zfa.owl uberon/bridge/cl-bridge-to-ma.owl uberon/bridge/cl-bridge-to-fma.owl uberon/bridge/uberon-bridge-to-nifstd.owl pato
+# Removed  uberon/bridge/uberon-bridge-to-nifstd.owl
+IMPORTS =  nbo go uberon ro chebi hsapdv cl mpath ncbitaxon-taxslim.owl go-plus so eco uberon-ext uberon-bridge-to-zfa.owl uberon/bridge/uberon-bridge-to-ma.owl uberon/bridge/uberon-bridge-to-fma.owl uberon/bridge/cl-bridge-to-zfa.owl uberon/bridge/cl-bridge-to-ma.owl uberon/bridge/cl-bridge-to-fma.owl pato
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))

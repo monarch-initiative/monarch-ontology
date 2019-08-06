@@ -44,3 +44,6 @@ $(ONT)-simple.owl: $(SRC_MERGED) $(OTHER_SRC) $(SIMPLESEED)
 
 reports/%-obo-report.tsv: %
 	$(ROBOT) -vvv report -i $< --fail-on $(REPORT_FAIL_ON) -o $@
+	
+odkinfo:
+	robot --version
