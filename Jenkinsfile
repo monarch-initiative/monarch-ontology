@@ -105,7 +105,8 @@ pipeline {
 					dir('./src/ontology') {
 						retry(3){
 							sh 'make odkinfo'
-							sh 'make prepare_release'
+							sh 'make preprocess_release'
+							sh 'make SRC=monarch-pre.owl prepare_release'
 						}
 					}
 
