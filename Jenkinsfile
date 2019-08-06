@@ -95,8 +95,8 @@ pipeline {
 		    sh 'OBO=http://purl.obolibrary.org/obo'
 
 		    dir('./src/ontology') {
+			sh 'make robot --version'
 			retry(3){
-			    sh 'make robot --version'
 			    sh 'make prepare_release'
 			}
 		    }
