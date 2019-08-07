@@ -24,6 +24,7 @@ components/so.owl: .FORCE
 
 preprocess_release: all_imports $(OTHER_SRC)
 	owltools $(USECAT) $(ONT)-edit.owl --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o monarch-pre.owl
+	$(ROBOT) reason -i monarch-pre.owl --reasoner ELK -D mo-incoherent.owl
 
 reports/%-obo-report.tsv: %
 	$(ROBOT) -vv report -i $< --fail-on $(REPORT_FAIL_ON) -o $@
