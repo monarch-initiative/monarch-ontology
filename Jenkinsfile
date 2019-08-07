@@ -106,7 +106,7 @@ pipeline {
 						retry(3){
 							sh 'make odkinfo'
 							sh 'make SRC=mo-edit.owl preprocess_release'
-							sh 'make SRC=monarch-pre.owl prepare_release'
+							// sh 'make SRC=monarch-pre.owl prepare_release'
 						}
 					}
 
