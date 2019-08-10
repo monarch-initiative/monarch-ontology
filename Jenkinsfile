@@ -5,10 +5,10 @@ pipeline {
 	// give us the max time in a day to get things right without
 	// disrupting people.
 	
-	triggers {
+	//triggers {
 		// Nightly, between 8pm-12:59pm PDT.
-		cron('H H(20-23) 1-31 * *')
-	}
+	//	cron('H H(20-23) 1-31 * *')
+	//}
 
 	environment {
 		
