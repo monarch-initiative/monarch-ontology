@@ -22,7 +22,9 @@ components/so.owl: .FORCE
 	$(ROBOT) merge -I $(URIBASE)/so.owl \
 	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@
 
-preprocess_release: all_imports $(OTHER_SRC)
+all_components: components/upheno.owl components/mondo.owl components/eco.owl components/so.owl
+
+preprocess_release: all_components all_imports $(OTHER_SRC)
 	owltools $(USECAT) $(ONT)-edit.owl --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o monarch-pre.owl
 	$(ROBOT) remove -i monarch-pre.owl --term owl:Nothing reason --reasoner ELK -D mo-incoherent.owl -o monarch-inferred.owl
 
