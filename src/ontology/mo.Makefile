@@ -35,3 +35,9 @@ preprocess_release: monarch-inferred.owl
 
 odkinfo:
 	robot --version
+	
+$(ONT)-full.owl: $(SRC) $(OTHER_SRC)
+	$(ROBOT) merge --input $< \
+		reason --reasoner ELK --equivalent-classes-allowed all \
+		relax \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
