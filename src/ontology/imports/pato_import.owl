@@ -10115,6 +10115,27 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0001547 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001547">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002198"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical quality inhering in a bearer by virtue of the bearer&apos;s exhibiting the physical characteristics of an entity consisting of particles that have neither a defined volume nor defined shape.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gaseous</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001547</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality of a gas</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001547"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical quality inhering in a bearer by virtue of the bearer&apos;s exhibiting the physical characteristics of an entity consisting of particles that have neither a defined volume nor defined shape.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemistry:http://chemistry.about.com/od/chemistryglossary/a/gasdefinition.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0001548 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001548">
@@ -13443,6 +13464,25 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0001735 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001735">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001548"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical quality inhering in a bearer by virtue of the bearer&apos;s parts having the arrangement which exhibits characteristics of liquids.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liquid</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001735</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liquid configuration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001735"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical quality inhering in a bearer by virtue of the bearer&apos;s parts having the arrangement which exhibits characteristics of liquids.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0001736 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001736">
@@ -13603,6 +13643,27 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001743"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radioactivity which is relatively high.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001748 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001748">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001857"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape quality in which a portion of the outermost boundary of an entity folds in space such that a portion that was originally convex is now concave.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001748</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#cell_quality"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">invaginated</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001748"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape quality in which a portion of the outermost boundary of an entity folds in space such that a portion that was originally convex is now concave.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -20890,6 +20951,27 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0002226 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002226">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001873"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cylindrical shape quality inhering in a bearer by virtue of the bearer&apos;s being imperfectly cylindrical or approximately cylindrical.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">george</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-07-13T04:22:30Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002226</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subcylindrical</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002226"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cylindrical shape quality inhering in a bearer by virtue of the bearer&apos;s being imperfectly cylindrical or approximately cylindrical.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.thefreedictionary.com/Subcylindrical</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0002232 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002232">
@@ -20954,6 +21036,28 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A notched shape quality inhering in a bearer by virtue of the bearer&apos;s having a notched tip or edge.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.thefreedictionary.com/emarginate</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002236 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002236">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002006"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shape quality inhering in a bearer by virtue of the bearer&apos;s being shaped like a wing.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">george</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-07-23T02:19:14Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wing-shaped</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002236</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aliform</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002236"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shape quality inhering in a bearer by virtue of the bearer&apos;s being shaped like a wing.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.thefreedictionary.com/aliform</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22231,6 +22335,28 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0002309 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002309">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002226"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A convex 3-D shape quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a by virtue of the bearer&apos;s exhibiting a consistently sized and approximately round cross-section along its length, which is many times larger than its diameter.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Gkoutos</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-09-09T04:50:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002309</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that a fiber shaped object may take any circuitous or straight path through space (think of a length of string or rope).</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fiber shaped</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002309"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A convex 3-D shape quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a by virtue of the bearer&apos;s exhibiting a consistently sized and approximately round cross-section along its length, which is many times larger than its diameter.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DC</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0002317 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002317">
@@ -22953,6 +23079,29 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0002422 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002422">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pertaining to the individual parts making up an aggregate fruit like a many-lobed &quot;berry,&quot; such as a raspberry.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gkoutos</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-17T03:11:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002422</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acinus is Latin for berry.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acinar</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002422"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pertaining to the individual parts making up an aggregate fruit like a many-lobed &quot;berry,&quot; such as a raspberry.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wikipedia:https://en.wikipedia.org/wiki/Acinus</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0002427 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002427">
@@ -23214,6 +23363,27 @@ Note: kinked PATO:0001798(synonym twisted) is similar to &apos;torsioned&apos;, 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0002468 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002468">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0015008"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structure quality inhering in a bearer by virtue of the bearer&apos;s being capable of swelling or stretching.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gkoutos</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-09-15T11:48:26Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002468</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distensible</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002468"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structure quality inhering in a bearer by virtue of the bearer&apos;s being capable of swelling or stretching.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:WD</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0002470 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002470">
@@ -23451,6 +23621,27 @@ Note: kinked PATO:0001798(synonym twisted) is similar to &apos;torsioned&apos;, 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002486"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a process by virtue of that process having two or more organisms as participants.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002487 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002487">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001236"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a process by virtue of that process having exactly one organism as a participant.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gkoutos</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-10-10T04:09:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002487</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single organismal process quality</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002487"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a process by virtue of that process having exactly one organism as a participant.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -23831,6 +24022,27 @@ Note: kinked PATO:0001798(synonym twisted) is similar to &apos;torsioned&apos;, 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0005021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0005021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001973"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuspidate quality inhering in a bearer by virtue of the bearer&apos;s possessing a single cusp.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wasila.dahdul</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-10-17T14:14:04Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0005021</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unicuspidate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0005021"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuspidate quality inhering in a bearer by virtue of the bearer&apos;s possessing a single cusp.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:WD</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0010000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0010000">
@@ -23988,6 +24200,27 @@ Note: kinked PATO:0001798(synonym twisted) is similar to &apos;torsioned&apos;, 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0015006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0015006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a structure by virtue of it consisting of many of repeated, similar or identical subunits, arranged in some orderly array.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0015006</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A complete coverage of this domain would subclasses homopolymeric, copolymeric, crystalline.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polymeric</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0015006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a structure by virtue of it consisting of many of repeated, similar or identical subunits, arranged in some orderly array.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:DOS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/pato-ontology/pato/issues/78</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0015007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0015007">
@@ -24002,6 +24235,25 @@ Note: kinked PATO:0001798(synonym twisted) is similar to &apos;torsioned&apos;, 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0015007"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a bearer by virtue of the degree to which the bearers stands out or projects beyond a surface or line.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:CJM</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0015008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0015008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a bearer by virtue of the extent to which the bearer is capable of being stretched or swollen.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0015008</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distensibility</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0015008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a bearer by virtue of the extent to which the bearer is capable of being stretched or swollen.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     

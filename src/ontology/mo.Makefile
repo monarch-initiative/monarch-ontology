@@ -16,7 +16,13 @@ components/upheno.owl: .FORCE
 	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
 .PRECIOUS: components/upheno.owl
 
-monarch-pre.owl:  all_imports $(OTHER_SRC)
+components/so.owl: .FORCE
+	@if [ $(IMP) = true ]; then touch $@; fi
+.PRECIOUS: components/so.owl
+
+all_components: components/upheno.owl components/so.owl components/mondo.owl components/eco.owl
+
+monarch-pre.owl:  all_imports all_components
 	owltools $(USECAT) $(ONT)-edit.owl --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
 
 monarch-pre-nothing.owl: monarch-pre.owl

@@ -38,6 +38,14 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon#anamorph -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon#anamorph">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anamorph</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ncbitaxon#blast_name -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon#blast_name">
@@ -80,6 +88,14 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon#in_part">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in-part</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon#misnomer -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon#misnomer">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">misnomer</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -778,6 +794,59 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1292243 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1292243">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6159"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_suborder"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:1292243</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Continenticola</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1292248 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1292248">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1292243"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_superfamily"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:1292248</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planarioidea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_131221 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131221">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_35493"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_subphylum"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charophyta/Embryophyta group</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">charophyte/embryophyte group</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:131221</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Streptophytina</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131221"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charophyta/Embryophyta group</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131221"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">charophyte/embryophyte group</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_131567 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131567">
@@ -953,6 +1022,70 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1437180 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1437180">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58024"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:1437180</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acrogymnospermae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_147100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_147100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6157"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:147100</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rhabditophora</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_147537 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_147537">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_716545"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_subphylum"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true yeasts</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:147537</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomycotina</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_147537"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true yeasts</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_147554 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_147554">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_451866"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_class"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Archiascomycota</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:147554</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomycetes</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_147554"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Archiascomycota</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#in_part"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_1476529 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1476529">
@@ -987,6 +1120,18 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:1489341</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Osteoglossocephalai</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_166126 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_166126">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_147100"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:166126</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seriata</rdfs:label>
     </owl:Class>
     
 
@@ -1138,6 +1283,19 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sciurognathi</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#in_part"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1963761 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1963761">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1963758"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_superfamily"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:1963761</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dipodoidea</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1500,6 +1658,19 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_27896 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_27896">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1292248"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:27896</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planariidae</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_30319 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_30319">
@@ -1510,6 +1681,46 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:30319</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pipoidea</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_30458 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_30458">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_8825"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owls</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:30458</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strigiformes</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_30458"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owls</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_30648 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_30648">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1963761"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jerboas</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:30648</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dipodidae</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_30648"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jerboas</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
     
 
 
@@ -1651,6 +1862,46 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apes</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3193">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131221"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">higher plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">land plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">land plants</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:3193</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Embryophyta</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3193"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">higher plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3193"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">land plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3193"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3193"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">land plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
     </owl:Axiom>
     
 
@@ -1828,12 +2079,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33083"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular slime molds</owl:annotatedTarget>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33083"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dictyostelid cellular slime molds</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
@@ -1855,6 +2100,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictyosteliida</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33083"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular slime molds</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
     </owl:Axiom>
     
 
@@ -1902,6 +2153,25 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3312 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3312">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1437180"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conifers</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:3312</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coniferophyta</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3312"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conifers</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
     </owl:Axiom>
     
@@ -2077,6 +2347,25 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33630 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33630">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alveolates</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:33630</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alveolata</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33630"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alveolates</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_33682 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33682">
@@ -2106,6 +2395,73 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:337687</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muroidea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3398 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3398">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58024"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25249442</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angiosperms</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flowering plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiospermae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flowering plants</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:3398</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnoliophyta</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3398"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angiosperms</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3398"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flowering plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3398"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiospermae</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3398"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flowering plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_34346 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_34346">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_147554"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:34346</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomycetales</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_35493 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_35493">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_phylum"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:35493</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Streptophyta</rdfs:label>
     </owl:Class>
     
 
@@ -2150,6 +2506,19 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_35737 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_35737">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_30648"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_subfamily"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:35737</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dipodinae</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_376913 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_376913">
@@ -2186,6 +2555,47 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:379584</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caniformia</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_38254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_38254">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_class"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glaucocystophytes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glaucophyceae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glaucophyta</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">algae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:38254</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glaucocystophyceae</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_38254"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glaucocystophytes</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_38254"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glaucophyceae</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_38254"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glaucophyta</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_38254"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">algae</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#in_part"/>
+    </owl:Axiom>
     
 
 
@@ -2456,6 +2866,37 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_451864 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_451864">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_subkingdom"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:15689432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:16151185</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17010206</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17051209</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17572334</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:451864</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dikarya</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_451866 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_451866">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4890"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_subphylum"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:451866</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taphrinomycotina</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_46877 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_46877">
@@ -2519,6 +2960,302 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:480118</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eremoneura</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_48867 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_48867">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_35737"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:48867</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaculus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4890 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4890">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_451864"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_phylum"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17572334</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ascomycetes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sac fungi</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ascomycetes</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:4890</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ascomycota</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4890"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ascomycetes</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4890"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sac fungi</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4890"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ascomycetes</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4891 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4891">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_147537"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_class"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemiascomycetes</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:4891</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomycetes</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4891"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemiascomycetes</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4892 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4892">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4891"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">budding yeasts</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endomycetales</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:4892</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomycetales</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4892"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">budding yeasts</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4892"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endomycetales</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4893 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4893">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4892"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:221665</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:44280</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:4893</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomycetaceae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4894 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4894">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_34346"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fission yeasts</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomycetoideae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:4894</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomycetaceae</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4894"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fission yeasts</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4894"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomycetoideae</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4895 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4895">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4894"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:4895</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomyces</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4896 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4896">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4895"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:45042</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fission yeast</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomyces malidevorans</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomyces pombeP</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:4896</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomyces pombe</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fission yeast</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomyces malidevorans</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizosaccharomyces pombeP</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#misspelling"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4930 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4930">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4893"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:36915</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pachytichospora</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:4930</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4930"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pachytichospora</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4932 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4932">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4930"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">baker&apos;s yeast</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brewer&apos;s yeast</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Candida robusta</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccaromyces cerevisiae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyce cerevisiae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces capensis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces italicus</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces oviformis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces uvarum var. melibiosus</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyes cerevisiae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sccharomyces cerevisiae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:4932</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces cerevisiae</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">baker&apos;s yeast</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brewer&apos;s yeast</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Candida robusta</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#anamorph"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccaromyces cerevisiae</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#misspelling"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyce cerevisiae</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#misspelling"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces capensis</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces italicus</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces oviformis</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyces uvarum var. melibiosus</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccharomyes cerevisiae</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#misspelling"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sccharomyces cerevisiae</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#misspelling"/>
+    </owl:Axiom>
     
 
 
@@ -2602,6 +3339,58 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_58023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_58023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3193"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vascular plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vascular plants</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:58023</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tracheophyta</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58023"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vascular plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58023"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vascular plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_58024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_58024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_78536"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seed plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seed plants</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:58024</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spermatophyta</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58024"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seed plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58024"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seed plants</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_6040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6040">
@@ -2644,6 +3433,53 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:6072</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eumetazoa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6157 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6157">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33213"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_phylum"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flatworm</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flatworms</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flatworms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:6157</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Platyhelminthes</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6157"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flatworm</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6157"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flatworms</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6157"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flatworms</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6159 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6159">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_166126"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:6159</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tricladida</rdfs:label>
     </owl:Class>
     
 
@@ -2727,6 +3563,33 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:6237</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caenorhabditis</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_6239 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6239">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6237"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">roundworm</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rhabditis elegans</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:6239</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caenorhabditis elegans</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6239"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">roundworm</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_6239"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rhabditis elegans</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
     
 
 
@@ -2985,6 +3848,18 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flies</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_716545 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_716545">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4890"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:716545</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">saccharomyceta</rdfs:label>
+    </owl:Class>
     
 
 
@@ -3616,6 +4491,25 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sharks and rays</owl:annotatedTarget>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_78536 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_78536">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58023"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">euphyllophytes</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:78536</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euphyllophyta</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_78536"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">euphyllophytes</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
     </owl:Axiom>
     
 
@@ -4352,6 +5246,19 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_8825 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_8825">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_8782"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_superorder"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:8825</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neognathae</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_88770 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_88770">
@@ -5023,6 +5930,87 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_9721 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9721">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_91561"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">whale</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">whales</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">whales, dolphins, and porpoises</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cetaceans</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">whales &amp; dolphins</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:9721</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cetacea</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9721"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">whale</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9721"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">whales</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9721"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">whales, dolphins, and porpoises</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#common_name"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9721"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cetaceans</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#synonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9721"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">whales &amp; dolphins</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#blast_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_9722 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9722">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9721"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_suborder"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tooth whales</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:9722</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odontoceti</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9722"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tooth whales</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_9747 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9747">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9722"/>
+        <ncbitaxon:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GC_ID:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:9747</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monodontidae</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_9774 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9774">
@@ -5612,6 +6600,17 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_subgenus -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_subgenus">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon#_taxonomic_rank"/>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:subgenus</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subgenus</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_suborder -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_suborder">
@@ -5674,6 +6673,17 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:superorder</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_tribe -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_tribe">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon#_taxonomic_rank"/>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncbi_taxonomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBITaxon:tribe</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tribe</rdfs:label>
     </owl:Class>
     
 

@@ -1955,9 +1955,27 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0002098 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002098"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_0002099 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002099"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0002129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002129"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0002131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002131"/>
     
 
 
@@ -2270,6 +2288,12 @@
     <!-- http://purl.obolibrary.org/obo/CL_0002243 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002243"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0002245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0002245"/>
     
 
 
@@ -2681,6 +2705,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_1000309 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1000309"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_1000310 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1000310"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_1000311 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1000311"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_1000312 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1000312"/>
@@ -2939,6 +2981,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_1000381 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1000381"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CL_1000383 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1000383"/>
@@ -2948,6 +2996,12 @@
     <!-- http://purl.obolibrary.org/obo/CL_1000384 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1000384"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_1000385 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_1000385"/>
     
 
 
@@ -4203,6 +4257,66 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_261293 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_261293">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_1000309"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epicardial adipocyte (post-embryonic human)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:261293</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_261297 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_261297">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_1000310"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adipocyte of epicardial fat of right ventricle (post-embryonic human)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:261297</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_261300 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_261300">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_1000311"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adipocyte of epicardial fat of left ventricle (post-embryonic human)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:261300</oboInOwl:id>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_263032 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_263032">
@@ -5063,6 +5177,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_263192 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_263192">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_1000381"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type 1 vestibular sensory cell of epithelium of crista of ampulla of semicircular duct of membranous labyrinth (post-embryonic human)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:263192</oboInOwl:id>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_263196 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_263196">
@@ -5099,6 +5233,26 @@
         </owl:equivalentClass>
         <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type 2 vestibular sensory cell of epithelium of macula of saccule of membranous labyrinth (post-embryonic human)</obo:IAO_0000589>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:263198</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_263200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_263200">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_1000385"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type 2 vestibular sensory cell of epithelium of crista of ampulla of semicircular duct of membranous labyrinth (post-embryonic human)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:263200</oboInOwl:id>
     </owl:Class>
     
 
@@ -7825,6 +7979,26 @@
         </owl:equivalentClass>
         <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">taste receptor cell (post-embryonic human)</obo:IAO_0000589>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:67910</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_67967 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_67967">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_0002098"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regular cardiac myocyte (post-embryonic human)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:67967</oboInOwl:id>
     </owl:Class>
     
 
@@ -10731,6 +10905,46 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_83108 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_83108">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_0002129"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regular atrial cardiac myocyte (post-embryonic human)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:83108</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_83109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_83109">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_0002131"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regular ventricular cardiac myocyte (post-embryonic human)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:83109</oboInOwl:id>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_83114 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_83114">
@@ -11507,6 +11721,28 @@
         </owl:equivalentClass>
         <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hematopoietic cell (post-embryonic human)</obo:IAO_0000589>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:83598</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_83601 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_83601">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_0000623"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_0002245"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natural killer cell (post-embryonic human)</obo:IAO_0000589>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete null lymphocyte (post-embryonic human)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMA:83601</oboInOwl:id>
     </owl:Class>
     
 

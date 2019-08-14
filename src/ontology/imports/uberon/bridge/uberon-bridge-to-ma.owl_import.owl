@@ -18559,6 +18559,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MA_0001036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MA_0001036">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0002870"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10090"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dorsal motor nucleus of vagus nerve (post-embryonic mouse)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:0001036</oboInOwl:id>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MA_0001039 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MA_0001039">
@@ -43461,6 +43481,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/MA_0002775 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MA_0002775">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0002479"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10090"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000589 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dorsal lateral geniculate nucleus (post-embryonic mouse)</obo:IAO_0000589>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:0002775</oboInOwl:id>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/MA_0002777 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MA_0002777">
@@ -58283,6 +58323,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UBERON_0002479 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002479"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/UBERON_0002481 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002481"/>
@@ -58658,6 +58704,12 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0002827 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002827"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0002870 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002870"/>
     
 
 
