@@ -6,30 +6,20 @@
 CATALOG = catalog-v001.xml
 USECAT= --catalog-xml $(CATALOG)
 
+components/%.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I $(URIBASE)/$*/metazoa.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/%.owl
+
 components/upheno.owl: .FORCE
-	$(ROBOT) merge -I $(URIBASE)/upheno/metazoa.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I $(URIBASE)/upheno/metazoa.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/upheno.owl
 
-components/mondo.owl: .FORCE
-	$(ROBOT) merge -I $(URIBASE)/mondo.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@
-
-components/eco.owl: .FORCE
-	$(ROBOT) merge -I $(URIBASE)/eco.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@
-
-components/so.owl: .FORCE
-	$(ROBOT) merge -I $(URIBASE)/so.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@
-
-all_components: components/upheno.owl components/mondo.owl components/eco.owl components/so.owl
-
-#echo "skipped all components"
-
-monarch-pre.owl:  all_components all_imports $(OTHER_SRC)
+monarch-pre.owl:  all_imports $(OTHER_SRC)
 	owltools $(USECAT) $(ONT)-edit.owl --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
 
-monarch-pre-nothing.owl: 
+monarch-pre-nothing.owl: monarch-pre.owl
 	$(ROBOT) remove -i monarch-pre.owl --term owl:Nothing --preserve-structure false -o $@
 
 monarch-inferred.owl: monarch-pre-nothing.owl
@@ -37,8 +27,5 @@ monarch-inferred.owl: monarch-pre-nothing.owl
 
 preprocess_release: monarch-inferred.owl
 
-reports/%-obo-report.tsv: %
-	$(ROBOT) -vv report -i $< --fail-on $(REPORT_FAIL_ON) -o $@
-	
 odkinfo:
 	robot --version
