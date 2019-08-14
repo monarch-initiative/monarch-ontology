@@ -55,8 +55,6 @@ Import(<http://purl.obolibrary.org/obo/mo/imports/uberon/bridge/uberon-bridge-to
 
 Import(<http://purl.obolibrary.org/obo/mo/imports/pato_import.owl>)
 
-Import(<http://purl.obolibrary.org/obo/mo/components/mondo.owl>)
-
 Import(<http://purl.obolibrary.org/obo/mo/components/upheno.owl>)
 
 Import(<http://purl.obolibrary.org/obo/mo/components/so.owl>)

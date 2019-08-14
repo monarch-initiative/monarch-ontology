@@ -38,3 +38,5 @@ components/
 /mo-*
 /mo.*
 src/ontology/monarch-pre.owl
+src/ontology/monarch-inferred.owl
+src/ontology/monarch-pre-nothing.owl
