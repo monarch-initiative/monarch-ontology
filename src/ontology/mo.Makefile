@@ -7,7 +7,7 @@ CATALOG = catalog-v001.xml
 USECAT= --catalog-xml $(CATALOG)
 
 components/%.owl: .FORCE
-	@if [ $(IMP) = true ]; then $(ROBOT) merge -I $(URIBASE)/$*/metazoa.owl \
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I $(URIBASE)/$*.owl \
 	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
 .PRECIOUS: components/%.owl
 
