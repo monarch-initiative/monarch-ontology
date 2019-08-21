@@ -41,23 +41,3 @@ $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 		reason --reasoner ELK --equivalent-classes-allowed all \
 		relax \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
-
-$(ONT)-simple.owl: $(SRC) $(OTHER_SRC) $(SIMPLESEED)
-	$(ROBOT) merge --input $< \
-		reason --reasoner ELK --equivalent-classes-allowed all \
-		relax \
-		remove --axioms equivalent \
-		relax \
-		filter --term-file $(SIMPLESEED) --select "annotations ontology anonymous self" --trim true --signature true \
-		reduce -r ELK \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
-# foo-simple-non-classified (edit->relax,reduce,drop imports, drop every axiom which contains an entity outside the "namespaces of interest") <- aka the HPO use case, no reason.
-# Should this be the non-classified ontology with the drop foreign axiom filter?
-# Consider adding remove --term "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"
-
-$(ONT)-simple-non-classified.owl: $(SRC) $(OTHER_SRC) $(ONTOLOGYTERMS)
-	$(ROBOT) remove --input $< --select imports --trim true \
-		remove --axioms equivalent \
-		reduce -r ELK \
-		filter --select ontology --term-file $(ONTOLOGYTERMS) --trim false \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
