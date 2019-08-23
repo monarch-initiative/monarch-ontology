@@ -63,7 +63,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  nbo go uberon ro chebi hsapdv cl mpath ncbitaxon-taxslim.owl go-plus so eco uberon-ext uberon-bridge-to-zfa.owl uberon/bridge/uberon-bridge-to-ma.owl uberon/bridge/uberon-bridge-to-fma.owl uberon/bridge/cl-bridge-to-zfa.owl uberon/bridge/cl-bridge-to-ma.owl uberon/bridge/cl-bridge-to-fma.owl uberon/bridge/uberon-bridge-to-nifstd.owl pato
+IMPORTS =  nbo go fao oba po vt stato bfo chebi hsapdv cl mpath ncbitaxon-taxslim.owl go-plus cl caro pato uberon-ext uberon-bridge-to-zfa.owl uberon/bridge/uberon-bridge-to-ma.owl uberon/bridge/uberon-bridge-to-wbbt.owl uberon/bridge/uberon-bridge-to-fbbt.owl uberon/bridge/uberon-bridge-to-fma.owl uberon/bridge/uberon-bridge-to-nifstd.owl uberon/bridge/cl-bridge-to-ma.owl uberon/bridge/cl-bridge-to-fma.owl uberon/bridge/cl-bridge-to-wbbt.owl uberon/bridge/cl-bridge-to-fbbt.owl cl-bridge-to-zfa.owl
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
@@ -182,7 +182,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC =   components/upheno.owl components/mondo.owl components/eco.owl components/so.owl
+OTHER_SRC =   components/upheno.owl components/mondo.owl components/eco.owl components/so.owl components/geno.owl components/sepio.owl components/ro.owl components/clo.owl components/uberon.owl components/ncit.owl components/fbbt.owl components/wbbt.owl components/ecto.owl components/zfa.owl components/maxo.owl
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
@@ -251,6 +251,97 @@ imports/%_import.obo: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f obo -o $@.tmp.obo && mv $@.tmp.obo $@; fi
 imports/%_import.json: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f json -o $@.tmp.json && mv $@.tmp.json $@; fi
+
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+components/%: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I $(URIBASE)/$* \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/%
+
+
+
+
+components/upheno.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I https://raw.githubusercontent.com/obophenotype/upheno/master/metazoa.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/upheno.owl
+
+
+
+components/mondo.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/mondo/mondo-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/mondo.owl
+
+
+
+components/eco.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/eco/eco-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/eco.owl
+
+
+
+
+
+
+
+
+
+
+
+
+
+components/uberon.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/uberon/uberon-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/uberon.owl
+
+
+
+
+
+components/fbbt.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/fbbt/fbbt-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/fbbt.owl
+
+
+
+components/wbbt.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/wbbt/wbbt-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/wbbt.owl
+
+
+
+components/ecto.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/ecto/ecto-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/ecto.owl
+
+
+
+components/zfa.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/zfa/zfa-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/zfa.owl
+
+
+
+components/maxo.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/maxo/maxo-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/maxo.owl
+
+
+
+
+
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
@@ -276,27 +367,67 @@ mirror/nbo.owl: mirror/nbo.trigger
 mirror/go.trigger: $(SRC)
 
 mirror/go.owl: mirror/go.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/go.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://current.geneontology.org/ontology/go-base.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon
-## Copy of uberon is re-downloaded whenever source changes
-mirror/uberon.trigger: $(SRC)
+## ONTOLOGY: fao
+## Copy of fao is re-downloaded whenever source changes
+mirror/fao.trigger: $(SRC)
 
-mirror/uberon.owl: mirror/uberon.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/uberon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/fao.owl: mirror/fao.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/fao.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: ro
-## Copy of ro is re-downloaded whenever source changes
-mirror/ro.trigger: $(SRC)
+## ONTOLOGY: oba
+## Copy of oba is re-downloaded whenever source changes
+mirror/oba.trigger: $(SRC)
 
-mirror/ro.owl: mirror/ro.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/oba.owl: mirror/oba.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/oba.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: po
+## Copy of po is re-downloaded whenever source changes
+mirror/po.trigger: $(SRC)
+
+mirror/po.owl: mirror/po.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/po.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: vt
+## Copy of vt is re-downloaded whenever source changes
+mirror/vt.trigger: $(SRC)
+
+mirror/vt.owl: mirror/vt.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/vt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: stato
+## Copy of stato is re-downloaded whenever source changes
+mirror/stato.trigger: $(SRC)
+
+mirror/stato.owl: mirror/stato.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/stato.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: bfo
+## Copy of bfo is re-downloaded whenever source changes
+mirror/bfo.trigger: $(SRC)
+
+mirror/bfo.owl: mirror/bfo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/bfo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
@@ -361,22 +492,32 @@ mirror/go-plus.owl: mirror/go-plus.trigger
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: so
-## Copy of so is re-downloaded whenever source changes
-mirror/so.trigger: $(SRC)
+## ONTOLOGY: cl
+## Copy of cl is re-downloaded whenever source changes
+mirror/cl.trigger: $(SRC)
 
-mirror/so.owl: mirror/so.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/so.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/cl.owl: mirror/cl.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/cl.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: eco
-## Copy of eco is re-downloaded whenever source changes
-mirror/eco.trigger: $(SRC)
+## ONTOLOGY: caro
+## Copy of caro is re-downloaded whenever source changes
+mirror/caro.trigger: $(SRC)
 
-mirror/eco.owl: mirror/eco.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/eco.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/caro.owl: mirror/caro.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/caro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: pato
+## Copy of pato is re-downloaded whenever source changes
+mirror/pato.trigger: $(SRC)
+
+mirror/pato.owl: mirror/pato.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/pato.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
@@ -411,6 +552,26 @@ mirror/uberon/bridge/uberon-bridge-to-ma.owl.owl: mirror/uberon/bridge/uberon-br
 .PRECIOUS: mirror/%.owl
 
 
+## ONTOLOGY: uberon/bridge/uberon-bridge-to-wbbt.owl
+## Copy of uberon/bridge/uberon-bridge-to-wbbt.owl is re-downloaded whenever source changes
+mirror/uberon/bridge/uberon-bridge-to-wbbt.owl.trigger: $(SRC)
+
+mirror/uberon/bridge/uberon-bridge-to-wbbt.owl.owl: mirror/uberon/bridge/uberon-bridge-to-wbbt.owl.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-wbbt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: uberon/bridge/uberon-bridge-to-fbbt.owl
+## Copy of uberon/bridge/uberon-bridge-to-fbbt.owl is re-downloaded whenever source changes
+mirror/uberon/bridge/uberon-bridge-to-fbbt.owl.trigger: $(SRC)
+
+mirror/uberon/bridge/uberon-bridge-to-fbbt.owl.owl: mirror/uberon/bridge/uberon-bridge-to-fbbt.owl.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-fbbt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
 ## ONTOLOGY: uberon/bridge/uberon-bridge-to-fma.owl
 ## Copy of uberon/bridge/uberon-bridge-to-fma.owl is re-downloaded whenever source changes
 mirror/uberon/bridge/uberon-bridge-to-fma.owl.trigger: $(SRC)
@@ -421,12 +582,12 @@ mirror/uberon/bridge/uberon-bridge-to-fma.owl.owl: mirror/uberon/bridge/uberon-b
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/cl-bridge-to-zfa.owl
-## Copy of uberon/bridge/cl-bridge-to-zfa.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/cl-bridge-to-zfa.owl.trigger: $(SRC)
+## ONTOLOGY: uberon/bridge/uberon-bridge-to-nifstd.owl
+## Copy of uberon/bridge/uberon-bridge-to-nifstd.owl is re-downloaded whenever source changes
+mirror/uberon/bridge/uberon-bridge-to-nifstd.owl.trigger: $(SRC)
 
-mirror/uberon/bridge/cl-bridge-to-zfa.owl.owl: mirror/uberon/bridge/cl-bridge-to-zfa.owl.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/uberon/bridge/uberon-bridge-to-nifstd.owl.owl: mirror/uberon/bridge/uberon-bridge-to-nifstd.owl.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-nifstd.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
@@ -451,22 +612,32 @@ mirror/uberon/bridge/cl-bridge-to-fma.owl.owl: mirror/uberon/bridge/cl-bridge-to
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/uberon-bridge-to-nifstd.owl
-## Copy of uberon/bridge/uberon-bridge-to-nifstd.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/uberon-bridge-to-nifstd.owl.trigger: $(SRC)
+## ONTOLOGY: uberon/bridge/cl-bridge-to-wbbt.owl
+## Copy of uberon/bridge/cl-bridge-to-wbbt.owl is re-downloaded whenever source changes
+mirror/uberon/bridge/cl-bridge-to-wbbt.owl.trigger: $(SRC)
 
-mirror/uberon/bridge/uberon-bridge-to-nifstd.owl.owl: mirror/uberon/bridge/uberon-bridge-to-nifstd.owl.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-nifstd.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/uberon/bridge/cl-bridge-to-wbbt.owl.owl: mirror/uberon/bridge/cl-bridge-to-wbbt.owl.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-wbbt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: pato
-## Copy of pato is re-downloaded whenever source changes
-mirror/pato.trigger: $(SRC)
+## ONTOLOGY: uberon/bridge/cl-bridge-to-fbbt.owl
+## Copy of uberon/bridge/cl-bridge-to-fbbt.owl is re-downloaded whenever source changes
+mirror/uberon/bridge/cl-bridge-to-fbbt.owl.trigger: $(SRC)
 
-mirror/pato.owl: mirror/pato.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/pato.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/uberon/bridge/cl-bridge-to-fbbt.owl.owl: mirror/uberon/bridge/cl-bridge-to-fbbt.owl.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-fbbt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: cl-bridge-to-zfa.owl
+## Copy of cl-bridge-to-zfa.owl is re-downloaded whenever source changes
+mirror/cl-bridge-to-zfa.owl.trigger: $(SRC)
+
+mirror/cl-bridge-to-zfa.owl.owl: mirror/cl-bridge-to-zfa.owl.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-zfa.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 

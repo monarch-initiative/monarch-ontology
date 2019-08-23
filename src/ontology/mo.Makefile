@@ -6,18 +6,12 @@
 CATALOG = catalog-v001.xml
 USECAT= --catalog-xml $(CATALOG)
 
-components/%.owl: .FORCE
-	@if [ $(IMP) = true ]; then $(ROBOT) merge -I $(URIBASE)/$*.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
-.PRECIOUS: components/%.owl
-
-components/upheno.owl: .FORCE
-	@if [ $(IMP) = true ]; then $(ROBOT) merge -I $(URIBASE)/upheno/metazoa.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
-.PRECIOUS: components/upheno.owl
-
 components/so.owl: .FORCE
-	@if [ $(IMP) = true ]; then touch $@; fi
+	@if [ $(IMP) = true ]; then touch $@ && echo "$@ CURRENTLY EXCLUDED!"; fi
+.PRECIOUS: components/so.owl
+	
+components/ncit.owl: .FORCE
+	@if [ $(IMP) = true ]; then touch $@ && echo "$@ CURRENTLY EXCLUDED!"; fi
 .PRECIOUS: components/so.owl
 
 all_components: components/upheno.owl components/so.owl components/mondo.owl components/eco.owl
