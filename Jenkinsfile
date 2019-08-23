@@ -5,10 +5,10 @@ pipeline {
 	// give us the max time in a day to get things right without
 	// disrupting people.
 	
-	triggers {
+	//triggers {
 		// Nightly, between 8pm-12:59pm PDT.
-		cron('H H(20-23) 1-31 * *')
-	}
+	//	cron('H H(20-23) 1-31 * *')
+	//}
 
 	environment {
 		
@@ -34,8 +34,8 @@ pipeline {
 		// finding artifacts.
 		ONTOLOGY_FILE_HINT = 'mo'
 		// Ontology repo information.
-		TARGET_ONTOLOGY_BRANCH = 'master'
-		TARGET_ONTOLOGY_URL = 'https://github.com/monarch-ebi-dev/monarch_ontology_data'
+		TARGET_ONTOLOGY_BRANCH = 'mo-odk'
+		TARGET_ONTOLOGY_URL = 'https://github.com/monarch-initiative/monarch-ontology.git'
 		// The people to call when things go bad or go well. It is a
 		// comma-space "separated" string.
 		TARGET_ADMIN_EMAILS = 'nicolas.matentzoglu@gmail.com'
@@ -69,7 +69,7 @@ pipeline {
 		
 		stage('Initialize') {
 			steps {
-				// Upgrading docker container
+				// Upgrading docker image
 				sh 'docker pull obolibrary/odkfull:latest'
 				// Start preparing environment.
 				sh 'env > env.txt'
@@ -103,8 +103,10 @@ pipeline {
 					// sh 'OBO=http://purl.obolibrary.org/obo'
 
 					dir('./src/ontology') {
-						retry(3){
-							sh 'make prepare_release'
+						retry(1){
+							sh 'make odkinfo'
+							sh 'make SRC=mo-edit.owl preprocess_release -B'
+							sh 'make IMP=false SRC=monarch-inferred.owl prepare_release -B'
 						}
 					}
 
