@@ -103,7 +103,7 @@ pipeline {
 					// sh 'OBO=http://purl.obolibrary.org/obo'
 
 					dir('./src/ontology') {
-						retry(3){
+						retry(1){
 							sh 'make odkinfo'
 							sh 'make SRC=mo-edit.owl preprocess_release -B'
 							sh 'make IMP=false SRC=monarch-inferred.owl prepare_release -B'
