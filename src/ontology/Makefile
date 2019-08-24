@@ -63,7 +63,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  nbo go fao oba po vt stato bfo chebi hsapdv cl mpath ncbitaxon-taxslim.owl go-plus cl caro pato uberon-ext uberon-bridge-to-zfa.owl uberon/bridge/uberon-bridge-to-ma.owl uberon/bridge/uberon-bridge-to-wbbt.owl uberon/bridge/uberon-bridge-to-fbbt.owl uberon/bridge/uberon-bridge-to-fma.owl uberon/bridge/uberon-bridge-to-nifstd.owl uberon/bridge/cl-bridge-to-ma.owl uberon/bridge/cl-bridge-to-fma.owl uberon/bridge/cl-bridge-to-wbbt.owl uberon/bridge/cl-bridge-to-fbbt.owl cl-bridge-to-zfa.owl
+IMPORTS =  nbo go fao oba po vt stato bfo chebi hsapdv cl mpath ncbitaxon-taxslim go-plus cl caro pato uberon-ext uberon-bridge-to-zfa uberon-bridge-to-ma uberon-bridge-to-wbbt uberon-bridge-to-fbbt uberon-bridge-to-fma uberon-bridge-to-nifstd cl-bridge-to-ma cl-bridge-to-fma cl-bridge-to-wbbt cl-bridge-to-fbbt cl-bridge-to-zfa
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
@@ -472,11 +472,11 @@ mirror/mpath.owl: mirror/mpath.trigger
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: ncbitaxon-taxslim.owl
-## Copy of ncbitaxon-taxslim.owl is re-downloaded whenever source changes
-mirror/ncbitaxon-taxslim.owl.trigger: $(SRC)
+## ONTOLOGY: ncbitaxon-taxslim
+## Copy of ncbitaxon-taxslim is re-downloaded whenever source changes
+mirror/ncbitaxon-taxslim.trigger: $(SRC)
 
-mirror/ncbitaxon-taxslim.owl.owl: mirror/ncbitaxon-taxslim.owl.trigger
+mirror/ncbitaxon-taxslim.owl: mirror/ncbitaxon-taxslim.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
@@ -532,111 +532,111 @@ mirror/uberon-ext.owl: mirror/uberon-ext.trigger
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon-bridge-to-zfa.owl
-## Copy of uberon-bridge-to-zfa.owl is re-downloaded whenever source changes
-mirror/uberon-bridge-to-zfa.owl.trigger: $(SRC)
+## ONTOLOGY: uberon-bridge-to-zfa
+## Copy of uberon-bridge-to-zfa is re-downloaded whenever source changes
+mirror/uberon-bridge-to-zfa.trigger: $(SRC)
 
-mirror/uberon-bridge-to-zfa.owl.owl: mirror/uberon-bridge-to-zfa.owl.trigger
+mirror/uberon-bridge-to-zfa.owl: mirror/uberon-bridge-to-zfa.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/uberon-bridge-to-ma.owl
-## Copy of uberon/bridge/uberon-bridge-to-ma.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/uberon-bridge-to-ma.owl.trigger: $(SRC)
+## ONTOLOGY: uberon-bridge-to-ma
+## Copy of uberon-bridge-to-ma is re-downloaded whenever source changes
+mirror/uberon-bridge-to-ma.trigger: $(SRC)
 
-mirror/uberon/bridge/uberon-bridge-to-ma.owl.owl: mirror/uberon/bridge/uberon-bridge-to-ma.owl.trigger
+mirror/uberon-bridge-to-ma.owl: mirror/uberon-bridge-to-ma.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/uberon-bridge-to-wbbt.owl
-## Copy of uberon/bridge/uberon-bridge-to-wbbt.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/uberon-bridge-to-wbbt.owl.trigger: $(SRC)
+## ONTOLOGY: uberon-bridge-to-wbbt
+## Copy of uberon-bridge-to-wbbt is re-downloaded whenever source changes
+mirror/uberon-bridge-to-wbbt.trigger: $(SRC)
 
-mirror/uberon/bridge/uberon-bridge-to-wbbt.owl.owl: mirror/uberon/bridge/uberon-bridge-to-wbbt.owl.trigger
+mirror/uberon-bridge-to-wbbt.owl: mirror/uberon-bridge-to-wbbt.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-wbbt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/uberon-bridge-to-fbbt.owl
-## Copy of uberon/bridge/uberon-bridge-to-fbbt.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/uberon-bridge-to-fbbt.owl.trigger: $(SRC)
+## ONTOLOGY: uberon-bridge-to-fbbt
+## Copy of uberon-bridge-to-fbbt is re-downloaded whenever source changes
+mirror/uberon-bridge-to-fbbt.trigger: $(SRC)
 
-mirror/uberon/bridge/uberon-bridge-to-fbbt.owl.owl: mirror/uberon/bridge/uberon-bridge-to-fbbt.owl.trigger
+mirror/uberon-bridge-to-fbbt.owl: mirror/uberon-bridge-to-fbbt.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-fbbt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/uberon-bridge-to-fma.owl
-## Copy of uberon/bridge/uberon-bridge-to-fma.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/uberon-bridge-to-fma.owl.trigger: $(SRC)
+## ONTOLOGY: uberon-bridge-to-fma
+## Copy of uberon-bridge-to-fma is re-downloaded whenever source changes
+mirror/uberon-bridge-to-fma.trigger: $(SRC)
 
-mirror/uberon/bridge/uberon-bridge-to-fma.owl.owl: mirror/uberon/bridge/uberon-bridge-to-fma.owl.trigger
+mirror/uberon-bridge-to-fma.owl: mirror/uberon-bridge-to-fma.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-fma.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/uberon-bridge-to-nifstd.owl
-## Copy of uberon/bridge/uberon-bridge-to-nifstd.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/uberon-bridge-to-nifstd.owl.trigger: $(SRC)
+## ONTOLOGY: uberon-bridge-to-nifstd
+## Copy of uberon-bridge-to-nifstd is re-downloaded whenever source changes
+mirror/uberon-bridge-to-nifstd.trigger: $(SRC)
 
-mirror/uberon/bridge/uberon-bridge-to-nifstd.owl.owl: mirror/uberon/bridge/uberon-bridge-to-nifstd.owl.trigger
+mirror/uberon-bridge-to-nifstd.owl: mirror/uberon-bridge-to-nifstd.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-nifstd.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/cl-bridge-to-ma.owl
-## Copy of uberon/bridge/cl-bridge-to-ma.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/cl-bridge-to-ma.owl.trigger: $(SRC)
+## ONTOLOGY: cl-bridge-to-ma
+## Copy of cl-bridge-to-ma is re-downloaded whenever source changes
+mirror/cl-bridge-to-ma.trigger: $(SRC)
 
-mirror/uberon/bridge/cl-bridge-to-ma.owl.owl: mirror/uberon/bridge/cl-bridge-to-ma.owl.trigger
+mirror/cl-bridge-to-ma.owl: mirror/cl-bridge-to-ma.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-ma.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/cl-bridge-to-fma.owl
-## Copy of uberon/bridge/cl-bridge-to-fma.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/cl-bridge-to-fma.owl.trigger: $(SRC)
+## ONTOLOGY: cl-bridge-to-fma
+## Copy of cl-bridge-to-fma is re-downloaded whenever source changes
+mirror/cl-bridge-to-fma.trigger: $(SRC)
 
-mirror/uberon/bridge/cl-bridge-to-fma.owl.owl: mirror/uberon/bridge/cl-bridge-to-fma.owl.trigger
+mirror/cl-bridge-to-fma.owl: mirror/cl-bridge-to-fma.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-fma.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/cl-bridge-to-wbbt.owl
-## Copy of uberon/bridge/cl-bridge-to-wbbt.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/cl-bridge-to-wbbt.owl.trigger: $(SRC)
+## ONTOLOGY: cl-bridge-to-wbbt
+## Copy of cl-bridge-to-wbbt is re-downloaded whenever source changes
+mirror/cl-bridge-to-wbbt.trigger: $(SRC)
 
-mirror/uberon/bridge/cl-bridge-to-wbbt.owl.owl: mirror/uberon/bridge/cl-bridge-to-wbbt.owl.trigger
+mirror/cl-bridge-to-wbbt.owl: mirror/cl-bridge-to-wbbt.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-wbbt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: uberon/bridge/cl-bridge-to-fbbt.owl
-## Copy of uberon/bridge/cl-bridge-to-fbbt.owl is re-downloaded whenever source changes
-mirror/uberon/bridge/cl-bridge-to-fbbt.owl.trigger: $(SRC)
+## ONTOLOGY: cl-bridge-to-fbbt
+## Copy of cl-bridge-to-fbbt is re-downloaded whenever source changes
+mirror/cl-bridge-to-fbbt.trigger: $(SRC)
 
-mirror/uberon/bridge/cl-bridge-to-fbbt.owl.owl: mirror/uberon/bridge/cl-bridge-to-fbbt.owl.trigger
+mirror/cl-bridge-to-fbbt.owl: mirror/cl-bridge-to-fbbt.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-fbbt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: cl-bridge-to-zfa.owl
-## Copy of cl-bridge-to-zfa.owl is re-downloaded whenever source changes
-mirror/cl-bridge-to-zfa.owl.trigger: $(SRC)
+## ONTOLOGY: cl-bridge-to-zfa
+## Copy of cl-bridge-to-zfa is re-downloaded whenever source changes
+mirror/cl-bridge-to-zfa.trigger: $(SRC)
 
-mirror/cl-bridge-to-zfa.owl.owl: mirror/cl-bridge-to-zfa.owl.trigger
+mirror/cl-bridge-to-zfa.owl: mirror/cl-bridge-to-zfa.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-zfa.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
