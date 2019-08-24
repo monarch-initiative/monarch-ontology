@@ -32,7 +32,7 @@ src/patterns/pattern_owl_seed.txt
 src/patterns/all_pattern_terms.txt
 src/ontology/simple_seed.txt
 src/ontology/merged-mo-edit.owl
-imports/
+/imports/
 reports/
 components/
 /mo-*
