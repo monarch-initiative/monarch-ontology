@@ -14,7 +14,7 @@ components/ncit.owl: .FORCE
 	@if [ $(IMP) = true ]; then touch $@ && echo "$@ CURRENTLY EXCLUDED!"; fi
 .PRECIOUS: components/so.owl
 
-all_components: components/upheno.owl components/so.owl components/mondo.owl components/eco.owl
+all_components: components/upheno.owl components/mondo.owl components/eco.owl components/so.owl components/geno.owl components/sepio.owl components/ro.owl components/clo.owl components/uberon.owl components/ncit.owl components/fbbt.owl components/wbbt.owl components/ecto.owl components/zfa.owl components/maxo.owl
 
 monarch-pre.owl:  all_imports all_components
 	owltools $(USECAT) $(ONT)-edit.owl --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
