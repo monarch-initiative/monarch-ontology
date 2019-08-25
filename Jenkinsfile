@@ -105,9 +105,9 @@ pipeline {
 					dir('./src/ontology') {
 						retry(1){
 							sh 'make odkinfo'
-							sh 'make all_imports'
-							sh 'make all_components'
-							sh 'make SRC=mo-edit.owl preprocess_release -B'
+							sh 'make IMP=true MIR=true all_imports'
+							sh 'make IMP=true MIR=true all_components'
+							sh 'make IMP=false SRC=mo-edit.owl preprocess_release -B'
 							sh 'make IMP=false SRC=monarch-inferred.owl prepare_release -B'
 						}
 					}
