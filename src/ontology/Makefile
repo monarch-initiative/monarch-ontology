@@ -31,7 +31,7 @@ TODAY ?= $(shell date +%Y-%m-%d)
 OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
 
 
-FORMATS = $(sort  owl obo owl)
+FORMATS = $(sort  owl owl)
 FORMATS_INCL_TSV = $(sort $(FORMAT) tsv)
 RELEASE_ARTEFACTS = $(sort  base full non-classified base full)
 
@@ -72,8 +72,6 @@ IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
 all_imports: $(IMPORT_FILES)
 
 all_imports_owl: $(foreach n,$(IMPORT_ROOTS), $(n).owl)
-
-all_imports_obo: $(foreach n,$(IMPORT_ROOTS), $(n).obo)
 
 
 ## -- subset targets --
@@ -146,19 +144,11 @@ prepare_initial_release: prepare_release
 # ----------------------------------------
 
 
-$(ONT)-base.obo: $(ONT)-base.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
-$(ONT)-full.obo: $(ONT)-full.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
-$(ONT)-non-classified.obo: $(ONT)-non-classified.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 # Main release artefacts
 $(ONT).owl: $(ONT)-full.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
-$(ONT).obo: $(ONT).owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 # ----------------------------------------
 # Initiating Step: Reason over source
 # ----------------------------------------
@@ -173,8 +163,6 @@ OTHER_SRC =   components/upheno.owl components/mondo.owl components/eco.owl comp
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/mo_terms.sparql $@
-
-
 
 
 
@@ -228,11 +216,6 @@ imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/%_import.owl
 
-# convert imports to obo.
-# this can be useful for spot-checks and diffs.
-# we set strict mode to false by default. For discussion see https://github.com/owlcs/owlapi/issues/752
-imports/%_import.obo: imports/%_import.owl
-	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f obo -o $@.tmp.obo && mv $@.tmp.obo $@; fi
 
 # ----------------------------------------
 # Components
