@@ -67,7 +67,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  nbo fao oba po vt stato bfo hsapdv cl mpath ncbitaxon-taxslim caro pato uberon-ext uberon-bridge-to-zfa uberon-bridge-to-ma uberon-bridge-to-wbbt uberon-bridge-to-fbbt uberon-bridge-to-fma uberon-bridge-to-nifstd cl-bridge-to-ma cl-bridge-to-fma cl-bridge-to-wbbt cl-bridge-to-fbbt cl-bridge-to-zfa
+IMPORTS =  nbo fao oba po vt stato bfo hsapdv cl mpath ncbitaxon-taxslim caro uberon-ext uberon-bridge-to-zfa uberon-bridge-to-ma uberon-bridge-to-wbbt uberon-bridge-to-fbbt uberon-bridge-to-fma uberon-bridge-to-nifstd cl-bridge-to-ma cl-bridge-to-fma cl-bridge-to-wbbt cl-bridge-to-fbbt cl-bridge-to-zfa
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
@@ -162,7 +162,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC =   components/go.owl components/go-plus.owl components/upheno.owl components/mondo.owl components/eco.owl components/so.owl components/geno.owl components/sepio.owl components/ro.owl components/clo.owl components/uberon.owl components/ncit.owl components/fbbt.owl components/wbbt.owl components/ecto.owl components/zfa.owl components/maxo.owl components/chebi.owl
+OTHER_SRC =   components/pato components/go.owl components/go-plus.owl components/upheno.owl components/mondo.owl components/eco.owl components/so.owl components/geno.owl components/sepio.owl components/ro.owl components/clo.owl components/uberon.owl components/ncit.owl components/fbbt.owl components/wbbt.owl components/ecto.owl components/zfa.owl components/maxo.owl components/chebi.owl
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
@@ -233,7 +233,24 @@ components/%: .FORCE
 
 
 
+components/pato: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/pato/pato-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/pato
 
+
+
+components/go.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://current.geneontology.org/ontology/go-base.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/go.owl
+
+
+
+components/go-plus.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/go/extensions/go-plus.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/go-plus.owl
 
 
 
@@ -258,13 +275,38 @@ components/eco.owl: .FORCE
 
 
 
+components/so.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/so.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/so.owl
 
 
 
+components/geno.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/geno.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/geno.owl
 
 
 
+components/sepio.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/sepio.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/sepio.owl
 
+
+
+components/ro.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/ro.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/ro.owl
+
+
+
+components/clo.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/clo.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/clo.owl
 
 
 
@@ -441,16 +483,6 @@ mirror/caro.trigger: $(SRC)
 
 mirror/caro.owl: mirror/caro.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/caro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PRECIOUS: mirror/%.owl
-
-
-## ONTOLOGY: pato
-## Copy of pato is re-downloaded whenever source changes
-mirror/pato.trigger: $(SRC)
-
-mirror/pato.owl: mirror/pato.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/pato/pato-base.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
