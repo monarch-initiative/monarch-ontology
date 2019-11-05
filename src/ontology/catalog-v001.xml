@@ -78,7 +78,7 @@
 
 
   
-  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/pato" uri="components/pato"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/pato.owl" uri="components/pato.owl"/>
   
   <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/go.owl" uri="components/go.owl"/>
   
