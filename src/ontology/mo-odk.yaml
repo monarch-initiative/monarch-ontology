@@ -53,7 +53,7 @@ import_group:
       mirror_from: http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-zfa.owl
 components:
   products:
-    - filename: pato
+    - filename: pato.owl
       source: http://purl.obolibrary.org/obo/pato/pato-base.owl
     - filename: go.owl
       source: http://current.geneontology.org/ontology/go-base.owl
