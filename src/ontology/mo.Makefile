@@ -3,6 +3,8 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
+OT_MEMO=100G
+OWLTOOLS=OWLTOOLS_MEMORY=$(OT_MEMO) owltools --no-logging
 CATALOG = catalog-v001.xml
 USECAT= --catalog-xml $(CATALOG)
 
@@ -17,7 +19,7 @@ components/ncit.owl: .FORCE
 all_components: $(OTHER_SRC)
 
 monarch-pre.owl: all_imports all_components
-	owltools $(USECAT) $(ONT)-edit.owl --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
+	$(OWLTOOLS) $(USECAT) $(ONT)-edit.owl --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
 
 monarch-pre-nothing.owl: monarch-pre.owl
 	$(ROBOT) remove -i monarch-pre.owl --term owl:Nothing --preserve-structure false -o $@
