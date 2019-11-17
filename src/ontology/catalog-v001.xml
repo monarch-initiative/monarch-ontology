@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/nbo_import.owl" uri="imports/nbo_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/nbo_import.obo" uri="imports/nbo_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/fao_import.owl" uri="imports/fao_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/fao_import.obo" uri="imports/fao_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/oba_import.owl" uri="imports/oba_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/oba_import.obo" uri="imports/oba_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/po_import.owl" uri="imports/po_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/po_import.obo" uri="imports/po_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/vt_import.owl" uri="imports/vt_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/vt_import.obo" uri="imports/vt_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/stato_import.owl" uri="imports/stato_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/stato_import.obo" uri="imports/stato_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/bfo_import.owl" uri="imports/bfo_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/bfo_import.obo" uri="imports/bfo_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/hsapdv_import.owl" uri="imports/hsapdv_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/hsapdv_import.obo" uri="imports/hsapdv_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl_import.owl" uri="imports/cl_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl_import.obo" uri="imports/cl_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/mpath_import.owl" uri="imports/mpath_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/mpath_import.obo" uri="imports/mpath_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/ncbitaxon-taxslim_import.owl" uri="imports/ncbitaxon-taxslim_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/ncbitaxon-taxslim_import.obo" uri="imports/ncbitaxon-taxslim_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/caro_import.owl" uri="imports/caro_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/caro_import.obo" uri="imports/caro_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-ext_import.owl" uri="imports/uberon-ext_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-ext_import.obo" uri="imports/uberon-ext_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-zfa_import.owl" uri="imports/uberon-bridge-to-zfa_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-zfa_import.obo" uri="imports/uberon-bridge-to-zfa_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-ma_import.owl" uri="imports/uberon-bridge-to-ma_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-ma_import.obo" uri="imports/uberon-bridge-to-ma_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-wbbt_import.owl" uri="imports/uberon-bridge-to-wbbt_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-wbbt_import.obo" uri="imports/uberon-bridge-to-wbbt_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-fbbt_import.owl" uri="imports/uberon-bridge-to-fbbt_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-fbbt_import.obo" uri="imports/uberon-bridge-to-fbbt_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-fma_import.owl" uri="imports/uberon-bridge-to-fma_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-fma_import.obo" uri="imports/uberon-bridge-to-fma_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-nifstd_import.owl" uri="imports/uberon-bridge-to-nifstd_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-nifstd_import.obo" uri="imports/uberon-bridge-to-nifstd_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-ma_import.owl" uri="imports/cl-bridge-to-ma_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-ma_import.obo" uri="imports/cl-bridge-to-ma_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-fma_import.owl" uri="imports/cl-bridge-to-fma_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-fma_import.obo" uri="imports/cl-bridge-to-fma_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-wbbt_import.owl" uri="imports/cl-bridge-to-wbbt_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-wbbt_import.obo" uri="imports/cl-bridge-to-wbbt_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-fbbt_import.owl" uri="imports/cl-bridge-to-fbbt_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-fbbt_import.obo" uri="imports/cl-bridge-to-fbbt_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-zfa_import.owl" uri="imports/cl-bridge-to-zfa_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-zfa_import.obo" uri="imports/cl-bridge-to-zfa_import.obo"/>
+  
+
+
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/pato.owl" uri="components/pato.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/go.owl" uri="components/go.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/go-plus.owl" uri="components/go-plus.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/upheno.owl" uri="components/upheno.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/mondo.owl" uri="components/mondo.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/eco.owl" uri="components/eco.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/so.owl" uri="components/so.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/geno.owl" uri="components/geno.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/sepio.owl" uri="components/sepio.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/ro.owl" uri="components/ro.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/clo.owl" uri="components/clo.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/uberon.owl" uri="components/uberon.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/ncit.owl" uri="components/ncit.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/fbbt.owl" uri="components/fbbt.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/wbbt.owl" uri="components/wbbt.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/ecto.owl" uri="components/ecto.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/zfa.owl" uri="components/zfa.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/maxo.owl" uri="components/maxo.owl"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mo/components/chebi.owl" uri="components/chebi.owl"/>
+  
+
+  <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base=""/>
+</catalog>

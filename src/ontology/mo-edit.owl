@@ -1,0 +1,80 @@
+
+Prefix(:=<http://purl.obolibrary.org/obo/mo.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/mo.owl>
+
+Import(<http://purl.obolibrary.org/obo/mo/imports/nbo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/fao_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/oba_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/po_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/vt_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/stato_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/bfo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/hsapdv_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/cl_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/mpath_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/ncbitaxon-taxslim_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/caro_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/uberon-ext_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-zfa_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-ma_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-wbbt_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-fbbt_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-fma_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/uberon-bridge-to-nifstd_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-ma_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-fma_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-wbbt_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-fbbt_import.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/imports/cl-bridge-to-zfa_import.owl>)
+
+Import(<http://purl.obolibrary.org/obo/mo/components/upheno.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/mondo.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/mondo-equivalents.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/eco.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/efo.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/so.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/geno.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/sepio.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/ro.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/clo.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/uberon.owl>)
+# Import(<http://purl.obolibrary.org/obo/mo/components/ncit.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/fbbt.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/wbbt.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/ecto.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/zfa.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/maxo.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/pato.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/go.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/go-plus.owl>)
+Import(<http://purl.obolibrary.org/obo/mo/components/chebi.owl>)
+
+Import(<http://purl.obolibrary.org/obo/mo/patterns/definitions.owl>)
+
+Annotation(dce:title "Monarch Ontology")
+Annotation(dcterms:license "Unspecified")
+Annotation(dce:description "None")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/MO_00000000>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/MO_00000000>
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MO_00000000> "root node"@en)
+
+
+)
+
