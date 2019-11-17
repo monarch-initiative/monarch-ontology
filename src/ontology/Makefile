@@ -162,7 +162,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC =   components/pato.owl components/go.owl components/go-plus.owl components/upheno.owl components/mondo.owl components/eco.owl components/so.owl components/geno.owl components/sepio.owl components/ro.owl components/clo.owl components/uberon.owl components/ncit.owl components/fbbt.owl components/wbbt.owl components/ecto.owl components/zfa.owl components/maxo.owl components/chebi.owl
+OTHER_SRC =   components/pato.owl components/go.owl components/go-plus.owl components/upheno.owl components/mondo-equivalents.owl components/mondo.owl components/eco.owl components/so.owl components/geno.owl components/sepio.owl components/ro.owl components/clo.owl components/efo.owl components/uberon.owl components/ncit.owl components/fbbt.owl components/wbbt.owl components/ecto.owl components/zfa.owl components/maxo.owl components/chebi.owl
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
@@ -261,6 +261,13 @@ components/upheno.owl: .FORCE
 
 
 
+components/mondo-equivalents.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/mondo/imports/equivalencies.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/mondo-equivalents.owl
+
+
+
 components/mondo.owl: .FORCE
 	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/mondo/mondo-base.owl \
 	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
@@ -307,6 +314,13 @@ components/clo.owl: .FORCE
 	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/clo.owl \
 	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
 .PRECIOUS: components/clo.owl
+
+
+
+components/efo.owl: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I http://www.ebi.ac.uk/efo/efo.owl \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/efo.owl
 
 
 
