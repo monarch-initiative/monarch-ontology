@@ -55,7 +55,6 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/xco.owl"/>
         <owl:imports rdf:resource="https://dublincore.org/2012/06/14/dcelements.rdf"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/spec/index.rdf"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
         
 <!--
 
