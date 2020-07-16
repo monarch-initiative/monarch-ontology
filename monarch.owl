@@ -28,7 +28,7 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/zfa.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/go/extensions/go-plus.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/eco-base.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/eco.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio.owl"/>
         <!-- <owl:imports rdf:resource="http://purl.obolibrary.org/obo/upheno/monarch/grouping_phenotype_inferences.owl"/> -->
