@@ -80,5 +80,5 @@ build/%-seed.txt: build/%.owl
 build/monarch-ontology-seed.txt: monarch.owl
 	robot query -i $< --use-graphs true -f tsv --query sparql/terms.sparql $@
 
-sri: components build/monarch-ontology-seed.txt build/monarch-ontology-sri-translator-seed.txt build/monarch-ontology-sri-translator.json
+sri: build/monarch-ontology-seed.txt build/monarch-ontology-sri-translator-seed.txt build/monarch-ontology-sri-translator.json
 
