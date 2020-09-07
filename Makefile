@@ -5,6 +5,8 @@ CATALOG = catalog-v001.xml
 USECAT= --catalog-xml $(CATALOG)
 #USECAT=
 CACHEDIR= cache
+OT_MEMO=50G
+OWLTOOLS=OWLTOOLS_MEMORY=$(OT_MEMO) owltools --no-logging
 
 TGT=monarch-merged-nd-reasoned
 
@@ -14,7 +16,7 @@ cat: $(CATALOG)
 
 # See: https://github.com/owlcollab/owltools/wiki/Import-Chain-Mirroring
 $(CATALOG): monarch.owl 
-	owltools $< --slurp-import-closure -d $(CACHEDIR) -c $@ --merge-imports-closure -o $(CACHEDIR)/merged.owl
+	$(OWLTOOLS) $< --slurp-import-closure -d $(CACHEDIR) -c $@ --merge-imports-closure -o $(CACHEDIR)/merged.owl
 
 # use this to repair individual items in the cache
 cache/%.owl:
@@ -22,27 +24,27 @@ cache/%.owl:
 
 # E.g. vertebrate-catalog.xml
 %-catalog.xml: %.owl
-	owltools $< --slurp-import-closure -d $(CACHEDIR) -c $@ 
+	$(OWLTOOLS) $< --slurp-import-closure -d $(CACHEDIR) -c $@ 
 
 # bundled
 %-merged.owl: %.owl 
-	owltools $(USECAT) $< --merge-imports-closure -o $@
+	$(OWLTOOLS) $(USECAT) $< --merge-imports-closure -o $@
 
 # bundled, no constraints
 %-merged-nd.owl: %.owl
-	owltools $(USECAT) $< --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
+	$(OWLTOOLS) $(USECAT) $< --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
 
 %-validate.txt: %.owl
-	owltools $(USECAT) $< --run-reasoner -r elk -u > $@
+	$(OWLTOOLS) $(USECAT) $< --run-reasoner -r elk -u > $@
 
 %-reasoned.owl: %.owl
-	owltools $(USECAT) $< --run-reasoner -r elk --assert-implied --remove-redundant-inferred-super-classes -o $@
+	$(OWLTOOLS) $(USECAT) $< --run-reasoner -r elk --assert-implied --remove-redundant-inferred-super-classes -o $@
 
 %.obo: %.owl
-	owltools $< --extract-mingraph --remove-axiom-annotations -o -f obo --no-check $@.tmp && grep -v ^owl-axiom $@.tmp > $@
+	$(OWLTOOLS) $< --extract-mingraph --remove-axiom-annotations -o -f obo --no-check $@.tmp && grep -v ^owl-axiom $@.tmp > $@
 
 build/monarch-ontology-dipper.owl: monarch-merged-nd.owl
-	owltools $< --remove-disjoints --remove-equivalent-to-nothing-axioms -o $@
+	$(OWLTOOLS) $< --remove-disjoints --remove-equivalent-to-nothing-axioms -o $@
 	# Hack to resolve https://github.com/monarch-initiative/monarch-ontology/issues/16
 	# Hack to normalize omim and hgnc IRIs
 	sed -i "/owl#ReflexiveProperty/d;\
