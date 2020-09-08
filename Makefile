@@ -65,7 +65,7 @@ imports/dc_import.owl:
 components: imports/dc_import.owl
 
 build/monarch-ontology-sri-translator.owl: build/monarch-ontology-dipper.owl
-	robot merge -i monarch-ontology-dipper.owl \
+	robot merge -i build/monarch-ontology-dipper.owl \
 		remove -T config/object-property-seed-sri-translator.txt --select complement --select object-properties --signature true \
 		remove -T config/annotation-property-seed-sri-translator.txt --select complement --select annotation-properties --signature true \
 		reason --reasoner ELK \
