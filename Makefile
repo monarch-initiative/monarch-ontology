@@ -64,13 +64,14 @@ imports/dc_import.owl:
 
 components: imports/dc_import.owl
 
+# 		remove -T config/object-property-seed-sri-translator.txt --select complement --select object-properties --signature true \
+#		remove -T config/annotation-property-seed-sri-translator.txt --select complement --select annotation-properties --signature true \
+
+
 build/monarch-ontology-sri-translator.owl: build/monarch-ontology-dipper.owl
 	robot merge -i build/monarch-ontology-dipper.owl \
-		remove -T config/object-property-seed-sri-translator.txt --select complement --select object-properties --signature true \
-		remove -T config/annotation-property-seed-sri-translator.txt --select complement --select annotation-properties --signature true \
 		reason --reasoner ELK \
 		relax \
-		reduce --reasoner ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
 build/monarch-ontology-sri-translator.json: build/monarch-ontology-sri-translator.owl
