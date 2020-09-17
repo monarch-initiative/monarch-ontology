@@ -67,9 +67,9 @@ components: imports/dc_import.owl
 # 		remove -T config/object-property-seed-sri-translator.txt --select complement --select object-properties --signature true \
 #		remove -T config/annotation-property-seed-sri-translator.txt --select complement --select annotation-properties --signature true \
 
-
+BL_CATEGORIES=https://archive.monarchinitiative.org/beta/rdf/blcategories/class-category.ttl
 build/monarch-ontology-sri-translator.owl: build/monarch-ontology-dipper.owl
-	robot merge -i build/monarch-ontology-dipper.owl \
+	robot merge -i build/monarch-ontology-dipper.owl -I $(BL_CATEGORIES) \
 		reason --reasoner ELK \
 		relax \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
