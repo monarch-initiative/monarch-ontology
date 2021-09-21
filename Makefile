@@ -70,6 +70,7 @@ components: imports/dc_import.owl
 BL_CATEGORIES=https://archive.monarchinitiative.org/latest/rdf/blcategories/class-category.ttl
 build/monarch-ontology-sri-translator.owl: build/monarch-ontology-dipper.owl
 	robot merge -i build/monarch-ontology-dipper.owl -I $(BL_CATEGORIES) \
+		unmerge -i unmerge.owl \
 		reason --reasoner ELK \
 		relax \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
