@@ -64,16 +64,26 @@ imports/dc_import.owl:
 
 components: imports/dc_import.owl
 
-# 		remove -T config/object-property-seed-sri-translator.txt --select complement --select object-properties --signature true \
+# 	remove -T config/object-property-seed-sri-translator.txt --select complement --select object-properties --signature true \
 #		remove -T config/annotation-property-seed-sri-translator.txt --select complement --select annotation-properties --signature true \
 
-BL_CATEGORIES=https://archive.monarchinitiative.org/latest/rdf/blcategories/class-category.ttl
-build/monarch-ontology-sri-translator.owl: build/monarch-ontology-dipper.owl
-	robot merge -i build/monarch-ontology-dipper.owl -I $(BL_CATEGORIES) \
+BL_MODEL="https://raw.githubusercontent.com/biolink/biolink-model/master/biolink-model.owl.ttl"
+
+build/bl-model.ttl:
+	wget $(BL_MODEL) -O $@
+
+build/monarch-ontology-sri-translator.owl: build/monarch-ontology-dipper.owl build/bl-model.ttl
+	robot merge -i build/monarch-ontology-dipper.owl \
 		unmerge -i unmerge.owl \
 		reason --reasoner ELK \
 		relax \
+		merge -i build/bl-model.ttl \
+		query --construct sparql/bl-categories.ru \
+		unmerge -i build/bl-model.ttl \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+
+#build/bl-categories.ttl: build/bl-model.ttl build/monarch-ontology-sri-translator.owl
+#	$(ROBOT) query -i $< --construct sparql/bl-categories.ru -o $@
 
 build/monarch-ontology-sri-translator.json: build/monarch-ontology-sri-translator.owl
 	robot convert -i $< -f json -o $@
