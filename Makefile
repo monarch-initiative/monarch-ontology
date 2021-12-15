@@ -9,7 +9,7 @@ OT_MEMO=50G
 OWLTOOLS=OWLTOOLS_MEMORY=$(OT_MEMO) owltools --no-logging
 ROBOT=robot
 
-all: build/monarch-ontology-final.json build/monarch-ontology-final.owl
+all: build/monarch-ontology-final.json build/monarch-ontology-final.owl build/monarch-ontology-seed-dipper.txt build/monarch-ontology-seed.txt
 
 #cat: $(CATALOG) 
 
@@ -82,6 +82,8 @@ build/monarch-ontology-final.json: build/monarch-ontology-final.owl
 #build/%-seed.txt: build/%.owl
 #	robot query -i $< --use-graphs true -f tsv --query sparql/terms.sparql $@
 	
-#build/monarch-ontology-seed.txt: monarch-merged.owl
-#	robot query -i $< --use-graphs true -f tsv --query sparql/terms.sparql $@
+build/monarch-ontology-seed.txt: build/monarch-ontology-final.owl
+	robot query -i $< --use-graphs true -f tsv --query sparql/terms.sparql $@
 
+build/monarch-ontology-seed-dipper.txt: build/monarch-ontology-dipper.owl
+	robot query -i $< --use-graphs true -f tsv --query sparql/terms.sparql $@
