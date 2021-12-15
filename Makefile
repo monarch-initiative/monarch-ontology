@@ -26,10 +26,10 @@ all: build/monarch-ontology-final.json build/monarch-ontology-final.owl
 
 # bundled, no constraints
 %-merged-nd.owl: %.owl
-	$(OWLTOOLS) $(USECAT) $< --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
+	$(OWLTOOLS) $< --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
 
 %-reasoned.owl: %.owl
-	$(OWLTOOLS) $(USECAT) $< --run-reasoner -r elk --assert-implied --remove-redundant-inferred-super-classes -o $@
+	$(OWLTOOLS) $< --run-reasoner -r elk --assert-implied --remove-redundant-inferred-super-classes -o $@
 
 #%.obo: %.owl
 #	$(OWLTOOLS) $< --extract-mingraph --remove-axiom-annotations -o -f obo --no-check $@.tmp && grep -v ^owl-axiom $@.tmp > $@
