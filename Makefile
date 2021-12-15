@@ -7,6 +7,7 @@ USECAT= --catalog-xml $(CATALOG)
 CACHEDIR= cache
 OT_MEMO=50G
 OWLTOOLS=OWLTOOLS_MEMORY=$(OT_MEMO) owltools --no-logging
+ROBOT=robot
 
 all: build/monarch-ontology-final.json build/monarch-ontology-final.owl
 
@@ -34,7 +35,7 @@ all: build/monarch-ontology-final.json build/monarch-ontology-final.owl
 #%.obo: %.owl
 #	$(OWLTOOLS) $< --extract-mingraph --remove-axiom-annotations -o -f obo --no-check $@.tmp && grep -v ^owl-axiom $@.tmp > $@
 
-build/monarch-ontology-dipper.owl: monarch-merged-nd-reasoned.owl
+build/monarch-ontology-dipper.owl: monarch-merged-nd.owl
 	$(OWLTOOLS) $< --remove-disjoints --remove-equivalent-to-nothing-axioms -o $@
 	# Hack to resolve https://github.com/monarch-initiative/monarch-ontology/issues/16
 	# Hack to normalize omim and hgnc IRIs
@@ -68,7 +69,7 @@ build/monarch-ontology-final.owl: build/monarch-ontology-dipper.owl build/bl-mod
 		unmerge -i unmerge.owl \
 		reason --reasoner ELK \
 		relax \
-		query --construct sparql/bl-categories.ru \
+		query --update sparql/bl-categories.ru \
 		unmerge -i build/bl-model.ttl \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
