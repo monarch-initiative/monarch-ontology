@@ -8,42 +8,33 @@ CACHEDIR= cache
 OT_MEMO=50G
 OWLTOOLS=OWLTOOLS_MEMORY=$(OT_MEMO) owltools --no-logging
 
-TGT=monarch-merged-nd-reasoned
+all: build/monarch-ontology-final.json build/monarch-ontology-final.owl
 
-all: $(TGT).owl $(TGT).obo
-
-cat: $(CATALOG) 
+#cat: $(CATALOG) 
 
 # See: https://github.com/owlcollab/owltools/wiki/Import-Chain-Mirroring
-$(CATALOG): monarch.owl 
-	$(OWLTOOLS) $< --slurp-import-closure -d $(CACHEDIR) -c $@ --merge-imports-closure -o $(CACHEDIR)/merged.owl
+#$(CATALOG): monarch.owl 
+#	$(OWLTOOLS) $< --slurp-import-closure -d $(CACHEDIR) -c $@ --merge-imports-closure -o $(CACHEDIR)/merged.owl
 
 # use this to repair individual items in the cache
-cache/%.owl:
-	wget --no-check-certificate http://$*.owl -O $@
+#cache/%.owl:
+#	wget --no-check-certificate http://$*.owl -O $@
 
 # E.g. vertebrate-catalog.xml
-%-catalog.xml: %.owl
-	$(OWLTOOLS) $< --slurp-import-closure -d $(CACHEDIR) -c $@ 
-
-# bundled
-%-merged.owl: %.owl 
-	$(OWLTOOLS) $(USECAT) $< --merge-imports-closure -o $@
+#%-catalog.xml: %.owl
+#	$(OWLTOOLS) $< --slurp-import-closure -d $(CACHEDIR) -c $@ 
 
 # bundled, no constraints
 %-merged-nd.owl: %.owl
 	$(OWLTOOLS) $(USECAT) $< --merge-imports-closure --remove-axioms -t DisjointClasses --remove-axioms -t ObjectPropertyDomain --remove-axioms -t ObjectPropertyRange -t DisjointUnion -o $@
 
-%-validate.txt: %.owl
-	$(OWLTOOLS) $(USECAT) $< --run-reasoner -r elk -u > $@
-
 %-reasoned.owl: %.owl
 	$(OWLTOOLS) $(USECAT) $< --run-reasoner -r elk --assert-implied --remove-redundant-inferred-super-classes -o $@
 
-%.obo: %.owl
-	$(OWLTOOLS) $< --extract-mingraph --remove-axiom-annotations -o -f obo --no-check $@.tmp && grep -v ^owl-axiom $@.tmp > $@
+#%.obo: %.owl
+#	$(OWLTOOLS) $< --extract-mingraph --remove-axiom-annotations -o -f obo --no-check $@.tmp && grep -v ^owl-axiom $@.tmp > $@
 
-build/monarch-ontology-dipper.owl: monarch-merged-nd.owl
+build/monarch-ontology-dipper.owl: monarch-merged-nd-reasoned.owl
 	$(OWLTOOLS) $< --remove-disjoints --remove-equivalent-to-nothing-axioms -o $@
 	# Hack to resolve https://github.com/monarch-initiative/monarch-ontology/issues/16
 	# Hack to normalize omim and hgnc IRIs
@@ -59,10 +50,10 @@ build/monarch-ontology-dipper.owl: monarch-merged-nd.owl
 	   $@
 
 # necessary because of HTTPS
-imports/dc_import.owl:
-	wget https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.rdf -O imports/dc_import.owl
+#imports/dc_import.owl:
+#	wget https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.rdf -O imports/dc_import.owl
 
-components: imports/dc_import.owl
+#components: imports/dc_import.owl
 
 # 	remove -T config/object-property-seed-sri-translator.txt --select complement --select object-properties --signature true \
 #		remove -T config/annotation-property-seed-sri-translator.txt --select complement --select annotation-properties --signature true \
@@ -72,12 +63,11 @@ BL_MODEL="https://raw.githubusercontent.com/biolink/biolink-model/master/biolink
 build/bl-model.ttl:
 	wget $(BL_MODEL) -O $@
 
-build/monarch-ontology-sri-translator.owl: build/monarch-ontology-dipper.owl build/bl-model.ttl
-	robot merge -i build/monarch-ontology-dipper.owl \
+build/monarch-ontology-final.owl: build/monarch-ontology-dipper.owl build/bl-model.ttl
+	robot merge -i build/bl-model.ttl -i build/monarch-ontology-dipper.owl \
 		unmerge -i unmerge.owl \
 		reason --reasoner ELK \
 		relax \
-		merge -i build/bl-model.ttl \
 		query --construct sparql/bl-categories.ru \
 		unmerge -i build/bl-model.ttl \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
@@ -85,14 +75,12 @@ build/monarch-ontology-sri-translator.owl: build/monarch-ontology-dipper.owl bui
 #build/bl-categories.ttl: build/bl-model.ttl build/monarch-ontology-sri-translator.owl
 #	$(ROBOT) query -i $< --construct sparql/bl-categories.ru -o $@
 
-build/monarch-ontology-sri-translator.json: build/monarch-ontology-sri-translator.owl
+build/monarch-ontology-final.json: build/monarch-ontology-final.owl
 	robot convert -i $< -f json -o $@
 
-build/%-seed.txt: build/%.owl
-	robot query -i $< --use-graphs true -f tsv --query sparql/terms.sparql $@
+#build/%-seed.txt: build/%.owl
+#	robot query -i $< --use-graphs true -f tsv --query sparql/terms.sparql $@
 	
-build/monarch-ontology-seed.txt: monarch-merged.owl
-	robot query -i $< --use-graphs true -f tsv --query sparql/terms.sparql $@
-
-sri: build/monarch-ontology-seed.txt build/monarch-ontology-sri-translator-seed.txt build/monarch-ontology-sri-translator.json
+#build/monarch-ontology-seed.txt: monarch-merged.owl
+#	robot query -i $< --use-graphs true -f tsv --query sparql/terms.sparql $@
 
