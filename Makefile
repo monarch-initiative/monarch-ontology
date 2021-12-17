@@ -70,6 +70,7 @@ build/monarch-ontology-final.owl: build/monarch-ontology-dipper.owl build/bl-mod
 		reason --reasoner ELK \
 		relax \
 		reduce \
+		reduce --named-classes-only true \
 		query --update sparql/bl-categories.ru \
 		unmerge -i build/bl-model.ttl \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
