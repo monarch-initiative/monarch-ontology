@@ -64,11 +64,25 @@ BL_MODEL="https://raw.githubusercontent.com/biolink/biolink-model/master/biolink
 build/bl-model.ttl:
 	wget $(BL_MODEL) -O $@
 
+# NOT REDUCING BECAUSE OF PROBLEM WITH SCIGRAPH when faced with
+# <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002328PHENOTYPE">
+#         <owl:equivalentClass>
+#             <owl:Restriction>
+#                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0000001"/>
+#                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002328"/>
+#             </owl:Restriction>
+#         </owl:equivalentClass>
+#         <rdfs:subClassOf>
+#             <owl:Restriction>
+#                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0000001"/>
+#                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002328"/>
+#             </owl:Restriction>
+#         </rdfs:subClassOf>
+#     </owl:Class>
 build/monarch-ontology-final.owl: build/monarch-ontology-dipper.owl build/bl-model.ttl
 	robot merge -i build/bl-model.ttl -i build/monarch-ontology-dipper.owl \
 		unmerge -i unmerge.owl \
 		reason --reasoner ELK \
-		relax \
 		reduce \
 		reduce --named-classes-only true \
 		query --update sparql/bl-categories.ru \
