@@ -49,7 +49,7 @@ pipeline {
 		// possible.
 		MAKECMD = 'make'
 		// Control the ROBOT environment.
-		ROBOT_JAVA_ARGS = '-Xmx60G'
+		ROBOT_JAVA_ARGS = '-Xmx100G'
 	}
 	options{
 		//timestamps()
@@ -105,15 +105,18 @@ pipeline {
 					dir('./src/ontology') {
 						retry(1){
 							sh 'make odkinfo'
-							sh 'make SRC=mo-edit.owl preprocess_release -B'
+							sh 'make IMP=true MIR=true all_components -B'
+							sh 'make IMP=false SRC=mo-edit.owl OT_MEMO=100G preprocess_release -B'
 							sh 'make IMP=false SRC=monarch-inferred.owl prepare_release -B'
 						}
 					}
 
 					// Move the products to somewhere "safe".
-					archiveArtifacts artifacts: "src/ontology/${ONTOLOGY_FILE_HINT}*.owl",
+					archiveArtifacts artifacts: "src/ontology/${ONTOLOGY_FILE_HINT}.owl",
 					onlyIfSuccessful: true
-					archiveArtifacts artifacts: "src/ontology/${ONTOLOGY_FILE_HINT}*.obo",
+					archiveArtifacts artifacts: "src/ontology/${ONTOLOGY_FILE_HINT}-base.owl",
+					onlyIfSuccessful: true
+					archiveArtifacts artifacts: "src/ontology/${ONTOLOGY_FILE_HINT}-non-classified.owl",
 					onlyIfSuccessful: true
 
 					// Now that the files are safely away onto skyhook for

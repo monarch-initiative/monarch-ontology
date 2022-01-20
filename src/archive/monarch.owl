@@ -29,8 +29,10 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/go/extensions/go-plus.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/so.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/eco.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/geno.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio.owl"/>
         <!-- <owl:imports rdf:resource="http://purl.obolibrary.org/obo/upheno/monarch/grouping_phenotype_inferences.owl"/> -->
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mondo.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mondo/mondo-with-equivalents.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/upheno/hp-mp/mp_hp-align-equiv.owl"/>
      
         <owl:imports     rdf:resource="http://purl.obolibrary.org/obo/uberon/ext.owl"/>
@@ -43,6 +45,18 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/uberon/bridge/cl-bridge-to-fma.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-nifstd.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
+        
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/OBF/FALDO/master/faldo.ttl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pw.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/jamesmalone/OBAN/master/ontology/oban_core.ttl"/>
+        <owl:imports rdf:resource="http://data.monarchinitiative.org/owl/clo_core.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pco.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/xco.owl"/>
+        <owl:imports rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl"/>
+        <owl:imports rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_type.ttl"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/spec/index.rdf"/>
+        
 <!--
 
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mp.owl"/>
