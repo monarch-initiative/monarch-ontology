@@ -1,8 +1,8 @@
 cache
-catalog-v001.xml
 *-merged.owl
 *-merged-*.owl
 *-catalog.xml
 *.tmp
 *.old
 monarch-merged*
+.DS_Store
