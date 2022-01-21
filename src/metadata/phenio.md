@@ -1,6 +1,6 @@
 ---
 layout: ontology_detail
-id: mo
+id: phenio
 title: Monarch Ontology
 jobs:
   - id: https://travis-ci.org/monarch-initiative/monarch-ontology
@@ -17,41 +17,43 @@ description: Monarch Ontology is an ontology...
 domain: stuff
 homepage: https://github.com/monarch-initiative/monarch-ontology
 products:
-  - id: mo.owl
+  - id: phenio.owl
     name: "Monarch Ontology main release in OWL format"
-  - id: mo.obo
+  - id: phenio.obo
     name: "Monarch Ontology additional release in OBO format"
-  - id: mo.json
+  - id: phenio.json
     name: "Monarch Ontology additional release in OBOJSon format"
-  - id: mo/mo-base.owl
+  - id: phenio/phenio-base.owl
     name: "Monarch Ontology main release in OWL format"
-  - id: mo/mo-base.obo
+  - id: phenio/phenio-base.obo
     name: "Monarch Ontology additional release in OBO format"
-  - id: mo/mo-base.json
+  - id: phenio/phenio-base.json
     name: "Monarch Ontology additional release in OBOJSon format"
 dependencies:
 - id: nbo
-- id: pr
-- id: go
-- id: uberon
-- id: ro
-- id: chebi
+- id: fao
+- id: oba
+- id: po
+- id: vt
+- id: stato
+- id: bfo
 - id: hsapdv
 - id: cl
 - id: mpath
-- id: ncbitaxon-taxslim.owl
-- id: go-plus
-- id: so
-- id: eco
+- id: ncbitaxon-taxslim
+- id: caro
 - id: uberon-ext
-- id: uberon-bridge-to-zfa.owl
-- id: uberon/bridge/uberon-bridge-to-ma.owl
-- id: uberon/bridge/uberon-bridge-to-fma.owl
-- id: uberon/bridge/cl-bridge-to-zfa.owl
-- id: uberon/bridge/cl-bridge-to-ma.owl
-- id: uberon/bridge/cl-bridge-to-fma.owl
-- id: uberon/bridge/uberon-bridge-to-nifstd.owl
-- id: pato
+- id: uberon-bridge-to-zfa
+- id: uberon-bridge-to-ma
+- id: uberon-bridge-to-wbbt
+- id: uberon-bridge-to-fbbt
+- id: uberon-bridge-to-fma
+- id: uberon-bridge-to-nifstd
+- id: cl-bridge-to-ma
+- id: cl-bridge-to-fma
+- id: cl-bridge-to-wbbt
+- id: cl-bridge-to-fbbt
+- id: cl-bridge-to-zfa
 
 tracker: https://github.com/monarch-initiative/monarch-ontology/issues
 license:
