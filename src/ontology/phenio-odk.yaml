@@ -1,5 +1,5 @@
 id: phenio
-title: "Monarch Ontology"
+title: "Phenomics Integrated Ontology"
 github_org: monarch-initiative
 repo: monarch-ontology
 report_fail_on: none
@@ -11,24 +11,38 @@ primary_release: full
 export_formats:
   - owl
 import_group:
+  use_base_merging: TRUE
+  exclude_iri_patterns:
+    - <http://purl.obolibrary.org/obo/GOCHE_*>
+    - <http://purl.obolibrary.org/obo/NCBITaxon_Union_*>
+    - <http://www.informatics.jax.org/marker/MGI:*>
+    - <http://purl.obolibrary.org/obo/OBA_*>
+    - <http://purl.obolibrary.org/obo/CARO_*>
+  slme_individuals: exclude
+  mirror_max_time_download: 400
   products:
     - id: nbo
-      mirror_from: http://purl.obolibrary.org/obo/nbo/nbo-base.owl
+      use_base: TRUE
     - id: fao
+      make_base: TRUE
     - id: oba
+      use_base: TRUE
     - id: po
-    - id: vt
+      make_base: TRUE
     - id: stato
     - id: bfo
     - id: hsapdv
+      make_base: TRUE
     - id: cl
-      mirror_from: http://purl.obolibrary.org/obo/cl/cl-base.owl
+      use_base: TRUE
     - id: mpath
+      make_base: TRUE
     - id: ncbitaxon-taxslim
       mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
     - id: caro
-    - id: uberon-ext
-      mirror_from: http://purl.obolibrary.org/obo/uberon/ext.owl
+      make_base: TRUE
+    - id: uberon
+      use_base: TRUE
     - id: uberon-bridge-to-zfa
       mirror_from: http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl
     - id: uberon-bridge-to-ma
@@ -56,9 +70,7 @@ components:
     - filename: pato.owl
       source: http://purl.obolibrary.org/obo/pato/pato-base.owl
     - filename: go.owl
-      source: http://current.geneontology.org/ontology/go-base.owl
-    - filename: go-plus.owl
-      source: http://purl.obolibrary.org/obo/go/extensions/go-plus.owl
+      source: http://purl.obolibrary.org/obo/go/go-base.owl
     - filename: upheno.owl
       source: https://raw.githubusercontent.com/obophenotype/upheno/master/metazoa.owl
     - filename: mondo-equivalents.owl
